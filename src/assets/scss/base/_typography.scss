@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    @include font-style();
+}
+
+h1 {
+    @include font-style($font-size : $font_size-h1);
+
+    &.profil-title{
+        @include font-style($font-size : $font_size-h1-profil);
+    }
+}
+
+h2 {
+    @include font-style($font-size : $font_size-h2);
+}
+
+h3 {
+    @include font-style($font-size : $font_size-h3);
+}
