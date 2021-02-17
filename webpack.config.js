@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
+
 const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
@@ -13,8 +14,26 @@ module.exports = {
         rules: [
             {
                 // Include CSS, Load and compile Sass
-                test: /\.scss$/,
-                use: ["style-loader", "css-loader?url=false", "sass-loader"]
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader?url=false",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        "postcss-preset-env",
+                                        "autoprefixer"
+
+                                    ],
+                                ],
+                            },
+                        },
+                    },
+                    "sass-loader"
+                ]
             },
             {
                 // Fix warning in console for Devtools loading SourceMap
@@ -54,13 +73,13 @@ module.exports = {
         new ESLintPlugin({
             emitWarning: true
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {
-        //             from: "src/assets/images",
-        //             to: "./assets/images/",
-        //         }
-        //     ]
-        // })
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "src/assets/images",
+                    to: "./assets/images/",
+                }
+            ]
+        })
     ]
 };
