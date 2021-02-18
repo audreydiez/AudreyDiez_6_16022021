@@ -4,13 +4,32 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    @include breakpoint(lg){
+        flex-wrap: nowrap;
+
+    }
+    @include breakpoint(xl){
+        padding: 0 2rem;
+    }
+
     &__logo{
         order: 1;
         flex-grow: 1;
+        background-color: #DB8876;
+
+        @include breakpoint(lg){
+            order: 1;
+            min-width: 200px;
+        }
 
         .logo{
             width: 80%;
             max-width: 150px;
+
+            @include breakpoint(lg){
+                min-width: 200px;
+            }
+
         }
     }
 
@@ -18,8 +37,17 @@
         order: 3;
         flex-basis: 100%;
 
+        background-color: #D3573C;
+
         padding: $layout-mgn-vert 0;
         text-align: center;
+
+        @include breakpoint(lg){
+            order: 2;
+            flex-grow: 1;
+            padding: 0 0;
+            align-self: center;
+        }
 
         & .filters-list{
 
@@ -32,12 +60,20 @@
 
     &__nav{
         order: 2;
-
+    background-color: #757575;
         text-align: right;
-
 
         display: flex;
         align-items: center;
+
+        @include breakpoint(lg){
+            order: 3;
+            min-width: 150px;
+            justify-content: flex-end;
+        }
+        @include breakpoint(xl){
+            min-width: 275px;
+        }
 
 
     }

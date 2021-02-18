@@ -12,14 +12,24 @@
         flex-basis: 100%;
 
 
+        @include breakpoint(sm){
+            padding-top: 4rem;
+            flex-basis: 50%;
+        }
+        @include breakpoint(lg){
+            padding-top: 4rem;
+            flex-basis: 33.33333%;
+        }
+
+
         & .profile{
             display: flex;
             flex-direction: column;
             width: 80%;
             margin: 0 auto;
-
-            text-align: center;
             background-color: pink;
+            text-align: center;
+
 
             overflow: hidden;
 

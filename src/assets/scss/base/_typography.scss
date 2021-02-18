@@ -54,5 +54,11 @@ h3 {
         & a:hover::after, a:focus::after  {
             width: 100%;
         }
+    @include breakpoint(xl){
+        font-size: 1.5rem;
+    }
+    @include breakpoint(xxl){
+        font-size: 2rem;
+    }
 }
 
