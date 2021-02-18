@@ -1,9 +1,5 @@
 .header{
 
-    height: auto;
-
-    padding: $layout-mgn-vert $layout-mgn-hrt;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,9 +7,6 @@
     &__logo{
         order: 1;
         flex-basis: 50%;
-
-
-        background-color: #C4C4C4;
 
         .logo{
             width: 80%;
@@ -23,7 +16,6 @@
     &__filters{
         order: 3;
         flex-basis: 100%;
-        background-color: #DB8876;
 
         padding: $layout-mgn-vert 0;
         text-align: center;
@@ -40,7 +32,6 @@
     &__nav{
         order: 2;
         flex-basis: 50%;
-        background-color: pink;
         text-align: right;
 
 
