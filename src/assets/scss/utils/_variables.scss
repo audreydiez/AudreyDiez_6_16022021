@@ -8,9 +8,11 @@ $tag-active : #901C1C;
 
 $background-base : #FFF;
 $default-pic: #C4C4C4;
+$tag-border-color : #C4C4C4;
 
 // Basic layout
-$layout-margin : 2.5rem 1.5rem;
+$layout-mgn-vert : 2rem;
+$layout-mgn-hrt : 1rem;
 
 // Font colours
 $font-colour-light : #FFF;
@@ -42,10 +44,15 @@ $font-size-h2 : 2.2rem;
 // H3 Styles
 $font-size-h3 : 1.5rem;
 
+// Hastags
+$font-size-tag : 0.9rem;
+
 
 // Box shadows
 $b-shadow : 3px 3px 8px #D3D3D3;
 $b-shadow-hover : 3px 3px 8px #666;
+
+
 
 // Breakpoint for responsive
 $breakpoints:(

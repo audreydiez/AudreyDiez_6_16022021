@@ -37,3 +37,21 @@
     font-weight: $font-weight;
     font-size: $font-size;
 }
+
+@mixin hastag-style($active-state : false){
+    border-radius: 11px;
+    padding: 0.3rem 0.4rem;
+
+    @if $active-state == false {
+        border : 0.5px solid $tag-border-color;
+        background-color: $background-base;
+        color: $font-colour-dark;
+
+    }
+    @else{
+        border : 0.5px solid $tag-active;
+        background-color: $colour-primary;
+        color: $font-colour-light;
+    }
+
+}

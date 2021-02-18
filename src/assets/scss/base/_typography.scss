@@ -19,3 +19,34 @@ h2 {
 h3 {
     @include font-style($font-size : $font_size-h3);
 }
+
+.hastag{
+    @include font-style($font-size : $font-size-tag);
+    @include hastag-style;
+    color: $colour-primary;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:focus {
+        @include hastag-style(true);
+    }
+
+
+}
+.nav-link{
+    color: $colour-primary;
+    transition: all 0.4s ease-in-out;
+        & a{
+
+        }
+        & a::after {
+            content: '';
+            width: 0px;
+            height: 1px;
+            display: block;
+            background: $colour-primary;
+            transition: 300ms;
+        }
+        & a:hover::after, a:focus::after  {
+            width: 100%;
+        }
+}
