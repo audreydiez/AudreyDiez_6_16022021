@@ -1,71 +1,82 @@
-.ph-cards{
-    width: 100%;
-    height: auto;
+.profile{
+    position: relative;
 
+    width: calc(100% - 1rem);
+
+    margin: $layout-mgn-vert/2 $layout-mgn-hrt/2;
+    padding: 1rem 0;
     background-color: #DB8876;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    &__card{
-        flex-basis: 100%;
-
-
-        @include breakpoint(sm){
-            padding-top: 4rem;
-            flex-basis: 50%;
-        }
-        @include breakpoint(lg){
-            padding-top: 4rem;
-            flex-basis: 33.33333%;
-        }
-
-
-        & .profile{
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            margin: 0 auto;
-            background-color: pink;
-            text-align: center;
-
-
-            overflow: hidden;
-
-
-            &__img{
-                width: 200px;
-                max-height: 200px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin: auto;
-
-            }
-
-            &__name{
-                margin: 1rem auto;
-
-            }
-
-            &__location{
-                margin: 0.5rem auto;
-                font-size: 0.9rem;
-                color: $colour-primary;
-            }
-            &__quote{
-                font-size: 0.7rem;
-            }
-            &__rate{
-                margin: 0.5rem auto;
-                font-size: 0.7rem;
-                color: $font-colour-light-grey;
-            }
-            &__tags .hastag{
-                margin: 0.2rem 0;
-            }
-        }
-
+    @include breakpoint(md){
+        margin: $layout-mgn-vert $layout-mgn-hrt;
+        width: calc(100% - 6rem);
+        padding: 3rem 2rem;
+        background-color: $colour-tertiary;
     }
 
+    &__location{
+        margin: 0.5rem auto;
+        font-size: 0.9rem;
+        color: $colour-primary;
+    }
+    &__quote{
+        font-size: 0.7rem;
+        margin: 0.5rem 0 0.5rem 0;
+        color: $font-colour-light-grey;
+    }
+    &__tags{
+        margin-top: 0.5rem;
+        & .hastag{
+            margin: 0.2rem 0;
+        }
+    }
+
+    &__contact{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,0%);
+
+        @include breakpoint(sm){
+            bottom: auto;
+            top: 1.2rem;
+            left: 300px;
+        }
+        @include breakpoint(md){
+            top: 2.5rem;
+            left: 490px;
+        }
+
+
+    }
+    &__avatar{
+        position: absolute;
+        top: -0.5rem;
+        right: 0;
+        width: 200px;
+        height: 200px;
+
+
+
+        & .avatar{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: 0;
+            @include breakpoint(sm){
+                width: 150px;
+                height: 150px;
+            }
+            @include breakpoint(md){
+                width: 200px;
+                height: 200px;
+            }
+
+            &__img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
 }

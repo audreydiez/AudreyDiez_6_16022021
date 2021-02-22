@@ -81,3 +81,23 @@
 
 }
 
+.header-small{
+    margin: 1rem $layout-mgn-hrt 0 $layout-mgn-hrt;
+    width: calc(100% - 2rem);
+
+    &__logo{
+        width: 50%;
+        background-color: #757575;
+
+        & .logo{
+            width: 100%;
+        }
+
+        @include breakpoint(sm){
+            max-width: 200px;
+        }
+    }
+
+
+
+}
