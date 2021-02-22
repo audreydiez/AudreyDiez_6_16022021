@@ -5,6 +5,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
 
+
+
 module.exports = {
     mode: 'development',
     devServer: {
@@ -62,13 +64,27 @@ module.exports = {
             }
         ]
     },
+    entry: {
+        'index': './src/index.js',
+        'photographer': './src/index.js'
+    },
     plugins: [
+
+
         new HtmlWebpackPlugin({
 
             // Load template from src/index.html
-            template: path.resolve(__dirname, "src", "index.html")
+            template: path.resolve(__dirname, "src", "index.html"),
+            chunks: ['index'],
+            inject: 'body'
 
         }),
+        new HtmlWebpackPlugin({
+            template: './src/photographer.html',
+            filename: 'photographer.html',
+            inject: 'body',
+        }),
+
         // ESLint disable error
         new ESLintPlugin({
             emitWarning: true
@@ -78,7 +94,7 @@ module.exports = {
                 {
                     from: "src/assets/images",
                     to: "./assets/images/",
-                }
+                },
             ]
         })
     ]
