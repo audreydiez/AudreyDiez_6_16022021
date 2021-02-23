@@ -57,3 +57,15 @@
     }
 
 }
+
+.content-tag{
+    position: absolute;
+    background-color: $colour-secondary;
+    min-width: 170px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
