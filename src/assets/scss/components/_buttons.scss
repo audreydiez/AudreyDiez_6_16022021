@@ -3,7 +3,7 @@
     color: $font-colour-light;
     padding: 1rem 1rem;
     border-radius: 5px;
-    min-width: 120px;
+    min-width: 150px;
     height: auto;
     text-align: center;
     span{
@@ -17,4 +17,43 @@
         min-height: 40px;
         min-width: 170px;
     }
+}
+
+.bottom-contact{
+    display: inherit;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    @include breakpoint(md){
+        display: none;
+    }
+}
+
+.day-rate{
+    display: none;
+
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+    background-color: $primary-active;
+
+    @include breakpoint(md){
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__likes{
+        flex-grow: 1;
+    }
+    &__rate{
+
+    }
+
 }

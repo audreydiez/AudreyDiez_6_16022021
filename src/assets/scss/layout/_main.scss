@@ -2,7 +2,6 @@
     width: 100%;
     height: auto;
 
-    background-color: #DB8876;
 
     display: flex;
     flex-direction: row;
@@ -13,7 +12,7 @@
 
 
         @include breakpoint(sm){
-            padding-top: 4rem;
+            padding-top: 2rem;
             flex-basis: 50%;
         }
         @include breakpoint(lg){
@@ -27,10 +26,7 @@
             flex-direction: column;
             width: 80%;
             margin: 0 auto;
-            background-color: pink;
             text-align: center;
-
-
             overflow: hidden;
 
 

@@ -4,6 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+
     @include breakpoint(lg){
         flex-wrap: nowrap;
 
@@ -15,7 +16,6 @@
     &__logo{
         order: 1;
         flex-grow: 1;
-        background-color: #DB8876;
 
         @include breakpoint(lg){
             order: 1;
@@ -37,7 +37,6 @@
         order: 3;
         flex-basis: 100%;
 
-        background-color: #D3573C;
 
         padding: $layout-mgn-vert 0;
         text-align: center;
@@ -60,7 +59,6 @@
 
     &__nav{
         order: 2;
-    background-color: #757575;
         text-align: right;
 
         display: flex;
@@ -82,12 +80,12 @@
 }
 
 .header-small{
-    margin: 1rem $layout-mgn-hrt 0 $layout-mgn-hrt;
+    margin: 1rem 0;
     width: calc(100% - 2rem);
 
     &__logo{
         width: 50%;
-        background-color: #757575;
+
 
         & .logo{
             width: 100%;

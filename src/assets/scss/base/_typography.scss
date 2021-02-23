@@ -28,6 +28,10 @@ h2 {
     @include font-style($font-size : $font_size-h2);
     color: $font-colour-medium;
 
+    &.photo-title{
+        @include font-style();
+        color: $colour-primary;
+    }
 
 }
 
@@ -73,3 +77,12 @@ h3 {
     }
 }
 
+.filters{
+    @include font-style($font-size : $font-size-filters);
+    color: $font-colour-light;
+}
+
+.day-rate{
+    color: $font-colour-black;
+    font-weight: $f-w-semibold;
+}
