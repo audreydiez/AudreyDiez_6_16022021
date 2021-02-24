@@ -82,6 +82,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/photographer.html',
             filename: 'photographer.html',
+            chunks: ['photographer'],
             inject: 'body',
         }),
 
