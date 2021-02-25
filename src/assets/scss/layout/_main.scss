@@ -9,6 +9,7 @@
 
     &__card{
         flex-basis: 100%;
+        text-align: center;
 
 
         @include breakpoint(sm){
@@ -29,7 +30,6 @@
             text-align: center;
             overflow: hidden;
 
-
             &__img{
                 width: 200px;
                 max-height: 200px;
@@ -38,28 +38,28 @@
                 margin: auto;
 
             }
-
             &__name{
                 margin: 1rem auto;
 
             }
 
-            &__location{
-                margin: 0.5rem auto;
-                font-size: 0.9rem;
-                color: $colour-primary;
-            }
-            &__quote{
-                font-size: 0.7rem;
-            }
-            &__rate{
-                margin: 0.5rem auto;
-                font-size: 0.7rem;
-                color: $font-colour-light-grey;
-            }
-            &__tags .hastag{
-                margin: 0.2rem 0;
-            }
+        }
+
+        & .location{
+            margin: 0.5rem auto;
+            font-size: 0.9rem;
+            color: $colour-primary;
+        }
+        & .quote{
+            font-size: 0.7rem;
+        }
+        & .rate{
+            margin: 0.5rem auto;
+            font-size: 0.7rem;
+            color: $font-colour-light-grey;
+        }
+        & .tags .hastag{
+            margin: 0.2rem 0;
         }
 
     }
