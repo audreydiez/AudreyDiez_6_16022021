@@ -1,4 +1,5 @@
 import "./assets/scss/style.scss";
+
 import { submitEngine } from "./contact_form";
 
 const ENV_prod = false;

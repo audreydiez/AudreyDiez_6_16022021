@@ -50,7 +50,7 @@ module.exports = {
                 use: ["babel-loader"]
             },
             {
-                test: /\.(png|jp(e*)g|svg)$/,
+                test: /\.(png|jp(e*)g|svg|gif|woff|woff2|eot|ttf)$/,
                 use: [
                     {
                         loader: 'url-loader',

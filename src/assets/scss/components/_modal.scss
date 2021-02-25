@@ -1,5 +1,5 @@
 #backgroundMask{
-    display: flex;
+    display: none;
     position: fixed;
     top:0;
     left: 0;
@@ -34,8 +34,11 @@
         right: 1rem;
         width: 30px;
         height: 30px;
-        background-color: #D3573C;
         text-align: center;
+
+        & i{
+            color: #FFFFFF;
+        }
     }
 
 
