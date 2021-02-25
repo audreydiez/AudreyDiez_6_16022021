@@ -39,6 +39,15 @@ h2 {
 
 h3 {
     @include font-style($font-size : $font_size-h3);
+
+    &.modalForm{
+        @include font-style($font-size : $font-size-h3);
+        line-height: 2.3rem;
+
+        @include breakpoint(sm){
+            @include font-style($font-size : $font-size-h3-modal);
+        }
+    }
 }
 
 .hastag{

@@ -1,120 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8"/>
-    <title>Hello2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Hello2</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-</head>
-<body>
+    </head>
+    <body>
 
+    <header class="header-small">
+        <figure class="header-small__logo">
+            <img src="assets/images/Logo.svg" alt="logo" class="logo">
+        </figure>
+    </header>
 
-<header class="header-small">
-    <figure class="header-small__logo">
-        <img src="assets/images/Logo.svg" alt="logo" class="logo">
-    </figure>
-</header>
+    <main class="main">
+        <section class="profile">
+            <h1 class="profil-title profil-title--small">Mimi Keel</h1>
+            <div class="profile__location">London, UK</div>
+            <div class="profile__quote">Voir le beau dans le quotidien</div>
+            <ul class="profile__tags">
+                <li class="hastag">#portraits</li>
+                <li class="hastag">#events</li>
+                <li class="hastag">#travel</li>
+                <li class="hastag">#animals</li>
+            </ul>
+            <div class="profile__avatar">
+                <figure class="avatar">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="avatar__img">
+                </figure>
+            </div>
+            <a href="#" type="button" class="contactForm profile__contact btn"><span>Contactez-moi</span></a>
+        </section>
 
-<main class="main">
-    <section class="profile">
-        <h1 class="profil-title profil-title--small">Mimi Keel</h1>
-        <div class="profile__location">London, UK</div>
-        <div class="profile__quote">Voir le beau dans le quotidien</div>
-        <ul class="profile__tags">
-            <li class="hastag">#portraits</li>
-            <li class="hastag">#events</li>
-            <li class="hastag">#travel</li>
-            <li class="hastag">#animals</li>
-        </ul>
-        <div class="profile__avatar">
-            <figure class="avatar">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="avatar__img">
-            </figure>
+        <label for="filters" class="filters-label">Trier par </label>
+        <select name="filters" id="filters" class="filters">
+            <option value="popularity" class="filters-options">Popularité</option>
+            <option value="date" class="filters-options">Date</option>
+            <option value="title" class="filters-options">Titre</option>
+        </select>
+
+        <div class="pictures">
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="pictures__picture">
+                <figure class="photo">
+                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <figcaption class="photo__details">
+                        <h2 class="photo-title">Arc-en-ciel</h2>
+                        <div class="price">70 €</div>
+                        <div class="likes">12 <3</div>
+                    </figcaption>
+                </figure>
+            </article>
         </div>
-        <a href="#" type="button" class="profile__contact btn"><span>Contactez-moi</span></a>
-    </section>
 
-    <label for="filters" class="filters-label">Trier par </label>
-    <select name="filters" id="filters" class="filters">
-        <option value="popularity" class="filters-options">Popularité</option>
-        <option value="date" class="filters-options">Date</option>
-        <option value="title" class="filters-options">Titre</option>
-    </select>
+        <a href="#" type="button" class="contactForm bottom-contact btn"><span>Contactez-moi</span></a>
 
-    <div class="pictures">
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-        <article class="pictures__picture">
-            <figure class="photo">
-                <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
-                <figcaption class="photo__details">
-                    <h2 class="photo-title">Arc-en-ciel</h2>
-                    <div class="price">70 €</div>
-                    <div class="likes">12 <3</div>
-                </figcaption>
-            </figure>
-        </article>
-    </div>
+        <div class="day-rate">
+            <div class="day-rate__likes">297 081 <3</div>
+            <div class="day-rate__rate">300€ / jour</div>
+        </div>
 
-    <a href="#" type="button" class="bottom-contact btn"><span>Contactez-moi</span></a>
 
-    <div class="day-rate">
-        <div class="day-rate__likes">297 081 <3</div>
-        <div class="day-rate__rate">300€ / jour</div>
+
+
+
+    </main>
+
+    <div id="backgroundMask">
+        <div id="contactFormModal">
+            <a href="#" class="closeModal">
+                X
+            </a>
+            <h3 class="modalForm">Contactez-moi <br>Mimi Keel</h3>
+            <form action="" name="formContact" onSubmit="launchEngine(event)" class="contactForm">
+
+                <div id="errors-display" role="alertdialog" aria-labelledby="errors">
+
+                </div>
+
+                <label for="firstName" class="form-label">Prénom</label>
+                <input name="firstName" class="form-control" id="firstName" aria-required="true" type="text">
+                <div class="form-error" id="firstName-msg">Error</div>
+                <label for="lastName" class="form-label">Nom</label>
+                <input name="lastName" class="form-control" id="lastName" aria-required="true" type="text">
+                <div class="form-error" id="lastName-msg">Error</div>
+                <label for="email" class="form-label">Email</label>
+                <input name="email" class="form-control" id="email" aria-required="true" type="email">
+                <div class="form-error" id="email-msg">Error</div>
+                <label for="message" class="form-label">Votre message</label>
+                <textarea id="message" role="textbox" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea>
+                <div class="form-error" id="message-msg">Error</div>
+                <button type="submit" class="form-submit btn">Envoyer</button>
+            </form>
+        </div>
     </div>
 
 
-</main>
-
-
-
-</body>
+    </body>
 </html>

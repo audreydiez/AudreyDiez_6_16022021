@@ -26,8 +26,8 @@
     left: 50%;
     transform: translate(-50%,0);
 
-    @include breakpoint(md){
-        display: none;
+    @include breakpoint(sm){
+        visibility: hidden;
     }
 }
 
