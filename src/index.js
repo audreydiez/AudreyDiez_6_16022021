@@ -23,15 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 console.log(contactFormContent);
-// Open modal for contactForm
-contactFormBtn.forEach((btn) => btn.addEventListener("click", openContactForm));
+if (contactFormBtn !== null && contactFormContent !== null){
 
-// Close modal for contactForm
-contactFormContent.addEventListener('click', (e) => e.stopPropagation());
-backgroundMask.addEventListener('click',  closeContactForm);
-closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
+    // Open modal for contactForm
+    contactFormBtn.forEach((btn) => btn.addEventListener("click", openContactForm));
 
-//Submit on button
+    // Close modal for contactForm
+    contactFormContent.addEventListener('click', (e) => e.stopPropagation());
+    backgroundMask.addEventListener('click',  closeContactForm);
+    closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
+}
+
+
 
 
 

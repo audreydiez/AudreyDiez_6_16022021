@@ -37,7 +37,8 @@ const formCheck = {
 // Set error message in form
 let errorTitle = document.createElement('p');
 errorTitle.textContent = formCheck.globalErrorMessage;
-ariaErrorBloc.appendChild(errorTitle);
+if(ariaErrorBloc!== null) ariaErrorBloc.appendChild(errorTitle);
+
 
 
 

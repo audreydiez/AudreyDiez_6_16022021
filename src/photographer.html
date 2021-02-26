@@ -20,7 +20,7 @@
     </header>
 
     <main class="main">
-        <section class="profile">
+        <section class="profile" aria-label="photographers">
             <h1 class="profil-title profil-title--small">Mimi Keel</h1>
             <div class="profile__location">London, UK</div>
             <div class="profile__quote">Voir le beau dans le quotidien</div>
@@ -48,7 +48,9 @@
         <div class="pictures">
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -58,7 +60,9 @@
             </article>
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -68,7 +72,9 @@
             </article>
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -78,7 +84,9 @@
             </article>
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -88,7 +96,9 @@
             </article>
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -98,7 +108,9 @@
             </article>
             <article class="pictures__picture">
                 <figure class="photo">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    <a href="assets/images/Portrait_Nora.jpg">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="avatar" class="photo__img">
+                    </a>
                     <figcaption class="photo__details">
                         <h2 class="photo-title">Arc-en-ciel</h2>
                         <div class="price">70 €</div>
@@ -106,6 +118,7 @@
                     </figcaption>
                 </figure>
             </article>
+
         </div>
 
         <a href="#" type="button" class="contactForm bottom-contact btn"><span>Contactez-moi</span></a>
@@ -121,9 +134,9 @@
 
     </main>
 
-    <div id="backgroundMask">
+    <div id="backgroundMask" aria-hidden="true">
         <div id="contactFormModal">
-            <a href="#" class="closeModal" title="Fermeture du formulaire">
+            <a href="#" class="closeModal" title="Close contact form">
                 <i class="fas fa-times fa-2x"></i>
             </a>
             <h3 class="modalForm">Contactez-moi <br>Mimi Keel</h3>
@@ -133,19 +146,40 @@
 
                 </div>
 
-                <label for="firstName" class="form-label">Prénom</label>
-                <input name="firstName" class="form-control" id="firstName" aria-required="true" type="text">
+                <label for="firstName" class="form-label" id="label-firstname">Prénom</label>
+                <input
+                        name="firstName"
+                        class="form-control"
+                        id="firstName"
+                        aria-required="true"
+                        type="text"
+                        aria-labelledby="label-firstname"
+                >
                 <div class="form-error" id="firstName-msg">Error</div>
-                <label for="lastName" class="form-label">Nom</label>
-                <input name="lastName" class="form-control" id="lastName" aria-required="true" type="text">
+                <label for="lastName" class="form-label" id="label-lastname">Nom</label>
+                <input
+                        name="lastName"
+                        class="form-control"
+                        id="lastName"
+                        aria-required="true"
+                        type="text"
+                        aria-labelledby="label-lastname"
+                >
                 <div class="form-error" id="lastName-msg">Error</div>
-                <label for="email" class="form-label">Email</label>
-                <input name="email" class="form-control" id="email" aria-required="true" type="email">
+                <label for="email" class="form-label" id="label-email">Email</label>
+                <input
+                        name="email"
+                        class="form-control"
+                        id="email"
+                        aria-required="true"
+                        type="email"
+                        aria-labelledby="label-email"
+                >
                 <div class="form-error" id="email-msg">Error</div>
                 <label for="message" class="form-label">Votre message</label>
                 <textarea id="message" role="textbox" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea>
                 <div class="form-error" id="message-msg">Error</div>
-                <button type="submit" class="form-submit btn">Envoyer</button>
+                <button type="submit" class="form-submit btn" title="Send">Envoyer</button>
             </form>
         </div>
     </div>
