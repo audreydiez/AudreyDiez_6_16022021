@@ -1,8 +1,12 @@
 import "./assets/scss/style.scss";
 
 import { submitEngine } from "./contact_form";
+import {Lightbox} from "./lightbox";
 
-const ENV_prod = false;
+
+
+
+const ENV_prod = true;
 
 
 const contactFormBtn = document.querySelectorAll(".contactForm");
@@ -22,7 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-console.log(contactFormContent);
+
+Lightbox.init();
+
 if (contactFormBtn !== null && contactFormContent !== null){
 
     // Open modal for contactForm
@@ -49,10 +55,13 @@ function closeContactForm() {
 
 function launchEngine(e) {
 
-    console.log("closing form");
+
     e.preventDefault();
     submitEngine();
 
 }
 
+
+
 window.launchEngine = launchEngine;
+//
