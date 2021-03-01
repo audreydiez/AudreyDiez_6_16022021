@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-Lightbox.init();
+
 
 if (contactFormBtn !== null && contactFormContent !== null){
 
@@ -40,7 +40,8 @@ if (contactFormBtn !== null && contactFormContent !== null){
     closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
 }
 
-
+// Lightbox
+Lightbox.init();
 
 
 
