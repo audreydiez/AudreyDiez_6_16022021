@@ -4,140 +4,153 @@
         <meta charset="utf-8"/>
         <title>Hello</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+                integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+                crossorigin="anonymous"
+        />
+
     </head>
     <body>
 
 
         <header class="header">
             <figure class="header__logo">
-                <img src="assets/images/Logo.svg" alt="logo" class="logo">
+                <a href="index.html"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a>
             </figure>
             <div class="header__filters">
                 <ul class="filters-list">
-                    <li class="filters-list__filter hastag">#Portrait</li>
-                    <li class="filters-list__filter hastag">#Art</li>
-                    <li class="filters-list__filter hastag">#Fashion</li>
-                    <li class="filters-list__filter hastag">#Architecture</li>
-                    <li class="filters-list__filter hastag">#Travel</li>
-                    <li class="filters-list__filter hastag">#Sport</li>
-                    <li class="filters-list__filter hastag">#Animals</li>
-                    <li class="filters-list__filter hastag">#Events</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Portrait</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Art</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Fashion</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Architecture</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Travel</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Sport</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Animals</li>
+                    <li class="filters-list__filter hastag">#<span class="sr-only">Tag</span>Events</li>
                 </ul>
             </div>
             <nav class="header__nav nav-link">
-                <a href="#">Nos photographes</a>
+                <h1 class="nav-link"><a href="#">Nos photographes</a></h1>
             </nav>
             <a href="#main-content" type="button" class="content-tag sr-only">Passer au contenu</a>
         </header>
 
         <main class="ph-cards" id="main-content">
             <article class="ph-cards__card">
+                <a href="photographer.html" aria-label="Voir la page du photographe Mimi Keel">
+                    <figure class="profile">
+                        <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
+                        <figcaption class="profile__name">
+                            <h2>Mimi Keel</h2>
+                        </figcaption>
+                    </figure>
+                </a>
+                <p class="location">London, UK</p>
+                <p class="quote">Voir le beau dans le quotidien</p>
+                <p class="rate">400€/jour</p>
+                <ul class="tags">
+                    <li class="hastag">#<span class="sr-only">Tag</span>portraits</li>
+                    <li class="hastag">#<span class="sr-only">Tag</span>events</li>
+                    <li class="hastag">#<span class="sr-only">Tag</span>travel</li>
+                    <li class="hastag">#<span class="sr-only">Tag</span>animals</li>
+                </ul>
+            </article>
+<!--            A supprimer-->
+            <article class="ph-cards__card">
                 <figure class="profile">
                     <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
                     <figcaption class="profile__name">
-                        <h2><a href="photographer.html">Mimi Keel</a></h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
+                        <h2>Mimi Keel</h2>
                     </figcaption>
                 </figure>
+                <div class="location">London, UK</div>
+                <div class="quote">Voir le beau dans le quotidien</div>
+                <div class="rate">400€/jour</div>
+                <ul class="tags">
+                    <li class="hastag">#portraits</li>
+                    <li class="hastag">#events</li>
+                    <li class="hastag">#travel</li>
+                    <li class="hastag">#animals</li>
+                </ul>
             </article>
             <article class="ph-cards__card">
                 <figure class="profile">
                     <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
                     <figcaption class="profile__name">
                         <h2>Mimi Keel</h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
                     </figcaption>
                 </figure>
+                <div class="location">London, UK</div>
+                <div class="quote">Voir le beau dans le quotidien</div>
+                <div class="rate">400€/jour</div>
+                <ul class="tags">
+                    <li class="hastag">#portraits</li>
+                    <li class="hastag">#events</li>
+                    <li class="hastag">#travel</li>
+                    <li class="hastag">#animals</li>
+                </ul>
             </article>
             <article class="ph-cards__card">
                 <figure class="profile">
                     <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
                     <figcaption class="profile__name">
                         <h2>Mimi Keel</h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
                     </figcaption>
                 </figure>
+                <div class="location">London, UK</div>
+                <div class="quote">Voir le beau dans le quotidien</div>
+                <div class="rate">400€/jour</div>
+                <ul class="tags">
+                    <li class="hastag">#portraits</li>
+                    <li class="hastag">#events</li>
+                    <li class="hastag">#travel</li>
+                    <li class="hastag">#animals</li>
+                </ul>
             </article>
             <article class="ph-cards__card">
                 <figure class="profile">
                     <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
                     <figcaption class="profile__name">
                         <h2>Mimi Keel</h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
                     </figcaption>
                 </figure>
+                <div class="location">London, UK</div>
+                <div class="quote">Voir le beau dans le quotidien</div>
+                <div class="rate">400€/jour</div>
+                <ul class="tags">
+                    <li class="hastag">#portraits</li>
+                    <li class="hastag">#events</li>
+                    <li class="hastag">#travel</li>
+                    <li class="hastag">#animals</li>
+                </ul>
             </article>
             <article class="ph-cards__card">
                 <figure class="profile">
                     <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
                     <figcaption class="profile__name">
                         <h2>Mimi Keel</h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
                     </figcaption>
                 </figure>
+                <div class="location">London, UK</div>
+                <div class="quote">Voir le beau dans le quotidien</div>
+                <div class="rate">400€/jour</div>
+                <ul class="tags">
+                    <li class="hastag">#portraits</li>
+                    <li class="hastag">#events</li>
+                    <li class="hastag">#travel</li>
+                    <li class="hastag">#animals</li>
+                </ul>
             </article>
-            <article class="ph-cards__card">
-                <figure class="profile">
-                    <img src="assets/images/Portrait_Nora.jpg" alt="Mimi Keel" class="profile__img">
-                    <figcaption class="profile__name">
-                        <h2>Mimi Keel</h2>
-                        <div class="profile__location">London, UK</div>
-                        <div class="profile__quote">Voir le beau dans le quotidien</div>
-                        <div class="profile__rate">400€/jour</div>
-                        <ul class="profile__tags">
-                            <li class="hastag">#portraits</li>
-                            <li class="hastag">#events</li>
-                            <li class="hastag">#travel</li>
-                            <li class="hastag">#animals</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-            </article>
+            <!-- //           A supprimer-->
         </main>
 
 
 
     <script src="index.js"></script></body>
+
+
+
 
 </html>
