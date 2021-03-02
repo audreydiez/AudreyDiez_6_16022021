@@ -1,7 +1,7 @@
 import "./assets/scss/style.scss";
 
 import { submitEngine } from "./contact_form";
-import {Lightbox} from "./lightbox";
+import {Lightbox, backgroundMaskLightbox} from "./lightbox";
 
 
 
@@ -41,8 +41,10 @@ if (contactFormBtn !== null && contactFormContent !== null){
 }
 
 // Lightbox
-Lightbox.init();
 
+if (backgroundMaskLightbox !== null) {
+    Lightbox.init();
+}
 
 
 

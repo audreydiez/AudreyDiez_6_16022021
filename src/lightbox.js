@@ -1,9 +1,15 @@
 // Get all img via 'a'
 const links = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"]');
 const img_box = document.getElementById("img-pushed");
-const backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
+
+export const backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
 
 const closeLightboxBtn = document.querySelector(".close-btn");
+
+const previousBtn = document.getElementById("previous");
+const nextBtn =document.getElementById("next");
+
+export const lightboxContainer = document.getElementById("lightbox__container");
 
 
 
@@ -11,8 +17,6 @@ let currentIndex = 0;
 
 
 export class Lightbox {
-
-
 
     static init (){
 
@@ -30,26 +34,56 @@ export class Lightbox {
             link.addEventListener('click', e => {
                 e.preventDefault();
                 currentIndex = e.currentTarget.index;
-                this.changeImageURL(link.pathname)
+                Lightbox.changeImageURL(link.pathname)
                 this.openLightbox();
                 console.log(currentIndex);
-                //console.log(links);
+                console.log("longueur:" + links.length);
             });
             index++;
         });
 
+        // Add btn event for lightbox
         closeLightboxBtn.addEventListener('click',  Lightbox.closeLightbox);
-
+        img_box.addEventListener('click', (e) => e.stopPropagation());
+        lightboxContainer.addEventListener('click',  Lightbox.closeLightbox);
+        previousBtn.addEventListener('click',  Lightbox.previousIMG);
+        nextBtn.addEventListener('click',  Lightbox.nextIMG);
+        // Bing key controls for accessibility
         this.bindKey();
+
 
     }
     /*
     * @param {string} url URL de l'image
     * @return {HTMLElement)
     * */
-    changeImageURL (url) {
+    static changeImageURL (url) {
         // change lightbox img in DOM
         img_box.src =url;
+    }
+
+    static changeImageIndex(direction) {
+        // If index = 0, index reach links.length
+        if(direction === "previous"){
+            if(currentIndex === 0){
+                currentIndex = links.length - 1;
+                console.log(links.length + ", current : " + currentIndex);
+            }
+            else {
+                currentIndex --;
+                console.log(links.length + ", current : " + currentIndex);
+            }
+        }
+        else if(direction === "next"){
+            if(currentIndex === (links.length - 1)){
+                currentIndex = 0;
+                console.log(links.length + ", current : " + currentIndex);
+            }
+            else {
+                currentIndex ++;
+                console.log(links.length + ", current : " + currentIndex);
+            }
+        }
     }
 
     openLightbox (){
@@ -61,21 +95,17 @@ export class Lightbox {
     }
 
     bindKey (){
-
         window.addEventListener("keydown", function (event) {
-            if (event.defaultPrevented) {
-                return; // Do nothing if the event was already processed
-            }
 
             switch (event.key) {
 
                 case "Left": // IE/Edge specific value
                 case "ArrowLeft":
-                    console.log("left");
+                    Lightbox.previousIMG();
                     break;
                 case "Right": // IE/Edge specific value
                 case "ArrowRight":
-                    console.log("right");
+                    Lightbox.nextIMG();
                     break;
                 case "Esc": // IE/Edge specific value
                 case "Escape":
@@ -84,19 +114,24 @@ export class Lightbox {
                 default:
                     return; // Quit when this doesn't handle the key event.
             }
-            // Cancel the default action to avoid it being handled twice
-            event.preventDefault();
-        }, true);
 
+        }, true);
     }
 
-    // nextIMG (currentIndex){
-    //     console.log(currentIndex);
-    // }
-    //
-    // previousIMG (currentIndex){
-    //     console.log(currentIndex);
-    // }
+
+    static nextIMG (){
+        Lightbox.changeImageIndex("next");
+        // Get image URL via current index
+        let urlByIndex = links[currentIndex].pathname;
+        Lightbox.changeImageURL(urlByIndex);
+    }
+
+    static previousIMG (){
+        Lightbox.changeImageIndex("previous");
+        // Get image URL via current index
+        let urlByIndex = links[currentIndex].pathname;
+        Lightbox.changeImageURL(urlByIndex);
+    }
 
 
 

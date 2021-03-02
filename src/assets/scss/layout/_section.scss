@@ -129,9 +129,11 @@
 
                 @include breakpoint(sm){
                     max-height: 250px;
+                    min-height: 250px;
                 }
                 @include breakpoint(md){
                     max-height: 300px;
+                    min-height: 300px;
                 }
             }
 
