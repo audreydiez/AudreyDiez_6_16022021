@@ -1,4 +1,5 @@
 import { Photographer} from "./photographer";
+import { IndexBuilder } from "./indexBuilder";
 
 export class Photographers {
 
@@ -19,8 +20,11 @@ export class Photographers {
         });
 
         console.log(photographers);
+        this.init(photographers);
     }
 
-
+    init(photographers) {
+        new IndexBuilder(photographers);
+    }
 
 }
