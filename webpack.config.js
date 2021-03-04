@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                // Include CSS, Load and compile Sass
+                // Include CSS, Load, autoprefix and compile Sass
                 test: /\.scss$/i,
                 use: [
                     "style-loader",

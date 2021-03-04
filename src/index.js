@@ -1,7 +1,13 @@
 import "./assets/scss/style.scss";
 
-import { submitEngine } from "./contact_form";
-import {Lightbox, backgroundMaskLightbox} from "./lightbox";
+
+import { submitEngine } from "./assets/js/contact_form";
+import {Lightbox, backgroundMaskLightbox} from "./assets/js/lightbox";
+import {App} from "./app";
+
+const JSON_url = "./src/data.json";
+
+const json = new App(JSON_url);
 
 
 

@@ -11,10 +11,7 @@ const nextBtn =document.getElementById("next");
 
 export const lightboxContainer = document.getElementById("lightbox__container");
 
-
-
 let currentIndex = 0;
-
 
 export class Lightbox {
 
