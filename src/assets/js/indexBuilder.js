@@ -1,4 +1,4 @@
-import { Photographers} from "./photographers";
+
 
 export class IndexBuilder{
     constructor(photographers) {
@@ -12,32 +12,45 @@ export class IndexBuilder{
     }
 
     renderPhotographersList (){
-        console.log("J'affiche les photographes");
 
-        const childElement = document.createElement("article");
-        const parentElement = document.getElementById("main-content");
+        this.photographers.forEach(photographer => {
 
-        childElement.classList.add("ph-cards__card");
-        childElement.setAttribute("id", "ph-card");
+            // Article creation
+            const childElement = document.createElement("article");
+            const parentElement = document.getElementById("main-content");
 
-        childElement.innerHTML = `
-                <a href="photographer.html" aria-label="Voir la page du photographe ${this.photographers[0].name}">
+            childElement.classList.add("ph-cards__card");
+            childElement.setAttribute("id", "ph-card");
+
+            let tags = '';
+
+            // Tags creation
+            photographer.tags.forEach(tag => {
+                tags += `<li class="hashtag">#<span class="sr-only">Tag</span>${tag}</li>`;
+            })
+
+            // Fill the article
+            childElement.innerHTML = `
+                <a href="photographer.html?id=${photographer.id}" aria-label="Voir la page du photographe ${photographer.name}">
                     <figure class="profile">
-                        <img src="assets/images/Portrait_Nora.jpg" alt="Portrait de ${this.photographers[0].name}" class="profile__img">
+                        <img src="assets/images/pictures/${photographer.portrait}" alt="Portrait de ${photographer.name}" class="profile__img">
                         <figcaption class="profile__name">
-                            <h2>Mimi Keel</h2>
+                            <h2>${photographer.name}</h2>
                         </figcaption>
                     </figure>
                 </a>
-                <p class="location">${this.photographers[0].city}, ${this.photographers[0].country}</p>
-                <p class="quote">${this.photographers[0].tagline}</p>
-                <p class="rate">${this.photographers[0].rate}€/jour</p>
-                <ul class="tags">
-                    <li class="hastag">#<span class="sr-only">Tag</span>${this.photographers[0].tags}</li>                    
+                <p class="location">${photographer.city}, ${photographer.country}</p>
+                <p class="quote">${photographer.tagline}</p>
+                <p class="rate">${photographer.price}€/jour</p>
+                <ul class="tags" id="tags">
+                    ${tags}                    
                 </ul>`;
 
-        parentElement.appendChild(childElement);
-        console.log(childElement);
+            // Display article
+            parentElement.appendChild(childElement);
+
+        });
+
     }
 
 }

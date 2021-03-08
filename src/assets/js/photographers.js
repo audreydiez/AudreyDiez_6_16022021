@@ -19,11 +19,11 @@ export class Photographers {
            ));
         });
 
-        console.log(photographers);
         this.init(photographers);
     }
 
     init(photographers) {
+        // Build index with photographers
         new IndexBuilder(photographers);
     }
 

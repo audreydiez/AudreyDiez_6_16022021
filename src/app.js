@@ -2,6 +2,7 @@ import { DataApi } from "./assets/js/data-api";
 import { Photographers} from "./assets/js/photographers";
 
 
+
 // 1 promise
 /*json.getData()
     .then(data => {
@@ -43,7 +44,9 @@ export class App {
         console.log(data.photographers);
     }*/
 
+    createEventListenners () {
 
+    }
 
 
 

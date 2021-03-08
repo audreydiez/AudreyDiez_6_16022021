@@ -50,7 +50,7 @@ h3 {
     }
 }
 
-.hastag{
+.hashtag{
     @include font-style($font-size : $font-size-tag);
     @include hastag-style;
     color: $colour-primary;

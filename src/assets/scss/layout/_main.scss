@@ -32,8 +32,10 @@
 
             &__img{
                 width: 200px;
+                height: 200px;
                 max-height: 200px;
                 object-fit: cover;
+                object-position: center center;
                 border-radius: 50%;
                 margin: auto;
 
@@ -58,8 +60,8 @@
             font-size: 0.7rem;
             color: $font-colour-light-grey;
         }
-        & .tags .hastag{
-            margin: 0.2rem 0;
+        & .tags .hashtag{
+            margin: 0.2rem 0.2rem;
         }
 
     }

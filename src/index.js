@@ -7,7 +7,9 @@ import {App} from "./app";
 
 const JSON_url = "./src/data.json";
 
-const json = new App(JSON_url);
+
+// Build index
+new App(JSON_url);
 
 
 

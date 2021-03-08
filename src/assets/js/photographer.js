@@ -1,4 +1,3 @@
-import { Photographers} from "./photographers";
 
 export class Photographer {
 
