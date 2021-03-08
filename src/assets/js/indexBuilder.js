@@ -8,19 +8,19 @@ export class IndexBuilder{
     }
 
     init(){
-        if (document.getElementById("main-content") != null){
+        if (document.getElementById("main-index") != null){
+
             this.renderPhotographersList();
         }
 
     }
 
     renderPhotographersList (){
-
-        this.photographers.forEach(photographer => {
+        this.photographers.photographers.forEach(photographer => {
 
             // Article creation
             const childElement = document.createElement("article");
-            const parentElement = document.getElementById("main-content");
+            const parentElement = document.getElementById("main-index");
 
             childElement.classList.add("ph-cards__card");
             childElement.setAttribute("id", "ph-card");

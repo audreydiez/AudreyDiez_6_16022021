@@ -27,7 +27,7 @@
     &__tags{
         margin-top: 0.5rem;
         & .hastag{
-            margin: 0.2rem 0;
+            margin: 0.2rem 0.2rem;
         }
     }
 
@@ -47,7 +47,7 @@
         }
         @include breakpoint(md){
             top: 2.5rem;
-            left: 490px;
+            left: 700px;
         }
 
 

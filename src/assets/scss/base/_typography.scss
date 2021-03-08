@@ -55,6 +55,7 @@ h3 {
     @include hastag-style;
     color: $colour-primary;
     transition: all 0.2s ease-in-out;
+    margin: 0.2rem;
 
     &:hover, &:focus {
         @include hastag-style(true);

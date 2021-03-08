@@ -30,11 +30,14 @@ export class App {
             .then(data => {
                 this.photographers = new Photographers(data);
             })
+            .then( data => {
+                this.init();
+            })
             .catch(err => {
                 console.log(err);
             });
 
-        this.init();
+
 
     }
 

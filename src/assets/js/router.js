@@ -1,3 +1,6 @@
+import {Photographers} from "./photographers";
+import { IndexBuilder } from "./indexBuilder";
+import { photographerBuilder } from "./photographerBuilder";
 
 export class Router {
 
@@ -17,20 +20,25 @@ export class Router {
                 this.reachPhotographers();
             }
 
-            //console.log(document.location);
         }
 
     }
 
     reachPhotographers (){
+
         let id = document.location.search.replace("?id=","");
         console.log(id);
-        // getPhotographerById(id)
-        console.log("detail");
+
+        let photographerDetail = this.photographers.getPhotographerById(id);
+
+        new photographerBuilder(photographerDetail[0]);
+
     }
 
     reachIndex (){
-        console.log("home");
+
+        new IndexBuilder(this.photographers);
+
     }
 
 }
