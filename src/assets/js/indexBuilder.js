@@ -8,7 +8,10 @@ export class IndexBuilder{
     }
 
     init(){
-        this.renderPhotographersList();
+        if (document.getElementById("main-content") != null){
+            this.renderPhotographersList();
+        }
+
     }
 
     renderPhotographersList (){

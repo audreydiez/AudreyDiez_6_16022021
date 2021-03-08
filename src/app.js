@@ -1,6 +1,6 @@
 import { DataApi } from "./assets/js/data-api";
 import { Photographers} from "./assets/js/photographers";
-
+import { Router} from "./assets/js/router";
 
 
 // 1 promise
@@ -32,10 +32,9 @@ export class App {
             })
             .catch(err => {
                 console.log(err);
-            })
+            });
 
-
-        //console.log(this.photographers);
+        this.init();
 
     }
 
@@ -44,8 +43,8 @@ export class App {
         console.log(data.photographers);
     }*/
 
-    createEventListenners () {
-
+    init () {
+        new Router(this.photographers);
     }
 
 
