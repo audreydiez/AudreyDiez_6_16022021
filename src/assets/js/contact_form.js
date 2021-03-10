@@ -44,6 +44,7 @@ if(ariaErrorBloc!== null) ariaErrorBloc.appendChild(errorTitle);
 
 function checkInputs (input) {
 
+
     if (input.toString() === "firstName"){
 
         let matchName = /^(?=.{2,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/;
@@ -81,7 +82,7 @@ function checkInputs (input) {
         else {
             formCheck.inputs.email = true;
             hideErrorMsg(input);
-            formCheck.data.email = lastName.email;
+            formCheck.data.email = email.value;
         }
     }
 
@@ -94,7 +95,7 @@ function checkInputs (input) {
         else {
             formCheck.inputs.message = true;
             hideErrorMsg(input);
-            formCheck.data.message = lastName.message;
+            formCheck.data.message = message.value;
         }
 
     }
