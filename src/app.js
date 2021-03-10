@@ -1,6 +1,7 @@
 import { DataApi } from "./assets/js/data-api";
 import { Photographers} from "./assets/js/photographers";
 import { Router} from "./assets/js/router";
+import {MediaFactory} from "./assets/js/media-factory";
 
 
 // 1 promise
@@ -23,14 +24,16 @@ import { Router} from "./assets/js/router";
 export class App {
     constructor(JSON_url) {
 
+
         // Fetch Json
         const dataApi = new DataApi(JSON_url);
 
         dataApi.getData()
             .then(data => {
                 this.photographers = new Photographers(data);
+                this.medias = new MediaFactory(data);
             })
-            .then( data => {
+            .then( () => {
                 this.init();
             })
             .catch(err => {
@@ -47,7 +50,10 @@ export class App {
     }*/
 
     init () {
-        new Router(this.photographers);
+        //console.log(this.medias)
+        //console.log(this.photographers)
+        new Router(this.photographers, this.medias);
+        //console.log(this.medias);
     }
 
 

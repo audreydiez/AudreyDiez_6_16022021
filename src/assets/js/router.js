@@ -4,8 +4,10 @@ import { photographerBuilder } from "./photographerBuilder";
 
 export class Router {
 
-    constructor(photographers) {
+    constructor(photographers, medias, data) {
         this.photographers = photographers;
+        this.medias = medias;
+        this.data = data;
         this.routeListenner();
 
     }
@@ -19,7 +21,9 @@ export class Router {
             else if (document.location.pathname === "/photographer.html"){
                 this.reachPhotographers();
             }
-
+        }
+        else {
+            this.reachIndex();
         }
 
     }
@@ -27,11 +31,14 @@ export class Router {
     reachPhotographers (){
 
         let id = document.location.search.replace("?id=","");
-        console.log(id);
+        //console.log(id);
 
         let photographerDetail = this.photographers.getPhotographerById(id);
+        let photographerMedias = this.medias.GetMediasByPhotographer(id);
 
-        new photographerBuilder(photographerDetail[0]);
+        new photographerBuilder(photographerDetail[0], photographerMedias);
+
+
 
     }
 
