@@ -37,15 +37,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-if (contactFormBtn !== null && contactFormContent !== null){
+export function setModalForm () {
+    if (contactFormBtn !== null && contactFormContent !== null){
 
-    // Open modal for contactForm
-    contactFormBtn.forEach((btn) => btn.addEventListener("click", openContactForm));
+        // Open modal for contactForm
+        contactFormBtn.forEach((btn) => btn.addEventListener("click", openContactForm));
 
-    // Close modal for contactForm
-    contactFormContent.addEventListener('click', (e) => e.stopPropagation());
-    backgroundMask.addEventListener('click',  closeContactForm);
-    closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
+        // Close modal for contactForm
+        contactFormContent.addEventListener('click', (e) => e.stopPropagation());
+        backgroundMask.addEventListener('click',  closeContactForm);
+        closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
+    }
 }
 
 // Lightbox
@@ -58,6 +60,8 @@ if (backgroundMaskLightbox !== null) {
 
 function openContactForm() {
     backgroundMask.style.display = "flex";
+
+
 }
 
 function closeContactForm() {

@@ -27,7 +27,20 @@
     transform: translate(-50%,0);
 
     @include breakpoint(sm){
-        visibility: hidden;
+        position: fixed;
+        top: 120px;
+        left: 55%;
+        transform: none;
+        width: 80px;
+        height: 30px;
+    }
+    @include breakpoint(md){
+        position: fixed;
+        top: 175px;
+        left: 60%;
+        transform: none;
+        width: 80px;
+        height: 30px;
     }
 }
 

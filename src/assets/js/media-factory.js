@@ -1,6 +1,5 @@
 import {VideoFactory} from "./video-factory";
 import {ImageFactory} from "./image-factory";
-import {Photographer} from "./photographer";
 
 export class MediaFactory {
 

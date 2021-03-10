@@ -46,16 +46,17 @@ export class photographerBuilder{
                 <figure class="avatar">
                     <img src="assets/images/pictures/${this.photographerDetail.portrait}" alt="avatar" class="avatar__img">
                 </figure>
-            </div>
-            <a href="#" type="button" class="contactForm profile__contact btn"><span>Contactez-moi</span></a>
+            </div>            
             `;
 
         parentElement.prepend(childElement);
+
+
     }
 
     displayMedia (){
 
-        console.log(this.photographerMedias);
+        //console.log(this.photographerMedias);
         // Bind to DOM
         let parentElement = document.getElementById("pictures");
 
@@ -85,7 +86,7 @@ export class photographerBuilder{
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2>
                        <div class="price">${media.price} €</div>
-                       <div class="likes">${media.likes} <3</div>
+                       <div class="likes">${media.likes} <i class="fas fa-heart"></i></div>
                   </figcaption>
               </figure>  
             `;

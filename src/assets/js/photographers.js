@@ -1,5 +1,4 @@
 import { Photographer} from "./photographer";
-import { IndexBuilder } from "./indexBuilder";
 
 export class Photographers {
 
@@ -24,11 +23,7 @@ export class Photographers {
         //console.log(this.photographers);
     }
 
-    init(photographers) {
-        // Build index with photographers
-        //new IndexBuilder(photographers);
 
-    }
 
     getPhotographerById (id){
         const photographerDetail = [];

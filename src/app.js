@@ -2,6 +2,7 @@ import { DataApi } from "./assets/js/data-api";
 import { Photographers} from "./assets/js/photographers";
 import { Router} from "./assets/js/router";
 import {MediaFactory} from "./assets/js/media-factory";
+import {setModalForm} from "./index";
 
 
 // 1 promise
@@ -54,6 +55,7 @@ export class App {
         //console.log(this.photographers)
         new Router(this.photographers, this.medias);
         //console.log(this.medias);
+        setModalForm();
     }
 
 

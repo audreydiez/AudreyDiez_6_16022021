@@ -1,4 +1,3 @@
-import {Photographers} from "./photographers";
 import { IndexBuilder } from "./indexBuilder";
 import { photographerBuilder } from "./photographerBuilder";
 
@@ -20,6 +19,7 @@ export class Router {
             }
             else if (document.location.pathname === "/photographer.html"){
                 this.reachPhotographers();
+
             }
         }
         else {
