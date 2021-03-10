@@ -1,5 +1,6 @@
 import { IndexBuilder } from "./indexBuilder";
 import { photographerBuilder } from "./photographerBuilder";
+import {Lightbox} from "./lightbox";
 
 export class Router {
 
@@ -20,6 +21,7 @@ export class Router {
             else if (document.location.pathname === "/photographer.html"){
                 this.reachPhotographers();
 
+
             }
         }
         else {
@@ -37,6 +39,8 @@ export class Router {
         let photographerMedias = this.medias.GetMediasByPhotographer(id);
 
         new photographerBuilder(photographerDetail[0], photographerMedias);
+
+
 
 
 

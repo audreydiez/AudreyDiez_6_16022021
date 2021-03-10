@@ -1,3 +1,4 @@
+import {Lightbox} from "./lightbox";
 
 
 export class photographerBuilder{
@@ -94,7 +95,7 @@ export class photographerBuilder{
             parentElement.appendChild(childElement);
         })
 
-
+        new Lightbox();
 
 
     }
