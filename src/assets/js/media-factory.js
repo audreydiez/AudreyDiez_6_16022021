@@ -14,9 +14,14 @@ export class MediaFactory {
 
             if (Object.keys(media)[2].toString() === "image"){
 
+                media.name = this.renameMedia(media.image);
+                media.url = media.image;
                 this.medias.push(new ImageFactory(media));
             }
             else if (Object.keys(media)[2].toString() === "video") {
+
+                media.name = this.renameMedia(media.video);
+                media.url = media.video;
                 this.medias.push(new VideoFactory(media));
             }
 
@@ -38,9 +43,19 @@ export class MediaFactory {
 
     }
 
-    RenameMedia (media) {
+    renameMedia (media) {
+        // Remove category
+        media = media.substring(media.indexOf("_") + 1);
+        // Remove format
+        media = media.split('.')[0];
+        // Remove all _
+        media = media.replace(/_/g, " ");
+
+        return media;
 
     }
+
+
 
 }
 

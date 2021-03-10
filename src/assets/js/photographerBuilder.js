@@ -59,8 +59,19 @@ export class photographerBuilder{
         // Bind to DOM
         let parentElement = document.getElementById("pictures");
 
+        // image / video thumbnail
+        let thumbnail = '';
+
+
 
         this.photographerMedias.forEach( media => {
+
+            if (media.type === "video"){
+                thumbnail = `<img src="assets/images/pictures/${media.poster}" alt="${media.description}" class="photo__img">`;
+            }
+            else {
+                thumbnail = `<img src="assets/images/pictures/${media.url}" alt="${media.description}" class="photo__img">`;
+            }
 
             let childElement = document.createElement("article");
             childElement.classList.add("pictures__picture");
@@ -68,11 +79,11 @@ export class photographerBuilder{
 
             childElement.innerHTML = `
               <figure class="photo">
-                  <a href="assets/images/pictures/${media.image}">
-                       <img src="assets/images/pictures/${media.image}" alt="${media.description}" class="photo__img">
+                  <a href="assets/images/pictures/${media.url}">
+                       ${thumbnail}
                   </a>
                   <figcaption class="photo__details">
-                       <h2 class="photo-title">${media.image}</h2>
+                       <h2 class="photo-title">${media.name}</h2>
                        <div class="price">${media.price} €</div>
                        <div class="likes">${media.likes} <3</div>
                   </figcaption>
