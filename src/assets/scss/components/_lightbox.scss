@@ -85,6 +85,18 @@
             }
         }
 
+        & .video-tag{
+            z-index: 10;
+            min-width: 65%;
+            max-width: 65%;
+            max-height: 90%;
+            height: auto;
+
+            @include breakpoint(sm){
+                max-width: 80%;
+            }
+        }
+
         & .loader img{
             position: absolute;
             z-index: 1;

@@ -17,8 +17,11 @@ export class Lightbox {
     * */
     constructor() {
 
-        this.links = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"]');
-        this.img_box = document.getElementById("img-pushed");
+        this.links = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".mp4"]');
+        this.img_pushed = document.getElementById("img-pushed");
+        this.video_pushed = document.getElementById("video-pushed");
+        this.video_tag = document.getElementById("video-tag");
+
         this.backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
         this.closeLightboxBtn = document.querySelector(".close-btn");
 
@@ -29,8 +32,10 @@ export class Lightbox {
 
         this.currentIndex = 0;
 
+
         let index = 0;
         this.links.forEach(link => {
+            console.log(link.pathname)
             link.index = index;
             link.addEventListener('click', e => {
                 e.preventDefault();
@@ -45,7 +50,7 @@ export class Lightbox {
 
         // Add btn event for lightbox
         this.closeLightboxBtn.addEventListener('click',  this.closeLightbox);
-        this.img_box.addEventListener('click', (e) => e.stopPropagation());
+        this.img_pushed.addEventListener('click', (e) => e.stopPropagation());
         this.lightboxContainer.addEventListener('click',  this.closeLightbox);
         this.previousBtn.addEventListener('click',  () => this.previousIMG());
         this.nextBtn.addEventListener('click',  () => this.nextIMG() );
@@ -60,7 +65,28 @@ export class Lightbox {
     * */
     changeImageURL (url) {
         // change lightbox img in DOM
-        this.img_box.src =url;
+
+        if (url.split('.').pop().toString() === "mp4"){
+            //this.img_box.style.display = "none";
+            //console.log(url);
+
+            this.video_tag.style.display = "block";
+            this.img_pushed.style.display = "none";
+            //console.log(url.split('.').pop().toString())
+            this.video_pushed.setAttribute("src", url);
+            this.video_tag.load();
+            this.video_tag.play();
+            //console.log(this.video_pushed.src);
+        }
+        else if (url.split('.').pop().toString() === "jpg") {
+            //console.log(url.split('.').pop().toString())
+
+            this.video_tag.style.display = "none";
+            this.img_pushed.style.display = "block";
+
+            this.img_pushed.src = url;
+
+        }
     }
 
 

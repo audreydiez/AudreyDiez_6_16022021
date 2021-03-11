@@ -67,9 +67,11 @@ export class photographerBuilder{
 
 
         this.photographerMedias.forEach( media => {
+            //console.log(media.url +","+ media.type)
 
             if (media.type === "video"){
                 thumbnail = `<img src="assets/images/pictures/${media.poster}" alt="${media.description}" class="photo__img">`;
+
             }
             else {
                 thumbnail = `<img src="assets/images/pictures/${media.url}" alt="${media.description}" class="photo__img">`;
@@ -81,7 +83,7 @@ export class photographerBuilder{
 
             childElement.innerHTML = `
               <figure class="photo">
-                  <a href="assets/images/pictures/${media.url}">
+                  <a href="assets/images/pictures/${media.url}" type="${media.type}">
                        ${thumbnail}
                   </a>
                   <figcaption class="photo__details">
