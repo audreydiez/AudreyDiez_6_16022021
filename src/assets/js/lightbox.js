@@ -2,14 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
 export class Lightbox {
 
     /*
@@ -55,7 +47,30 @@ export class Lightbox {
         this.previousBtn.addEventListener('click',  () => this.previousIMG());
         this.nextBtn.addEventListener('click',  () => this.nextIMG() );
         // Bing key controls for accessibility
-        this.bindKey();
+
+
+        window.addEventListener("keydown", e => {
+
+            switch (e.key) {
+
+                case "Left": // IE/Edge specific value
+                case "ArrowLeft":
+                    this.previousIMG();
+                    break;
+                case "Right": // IE/Edge specific value
+                case "ArrowRight":
+                    this.nextIMG();
+                    break;
+                case "Esc": // IE/Edge specific value
+                case "Escape":
+                    this.closeLightbox();
+                    break;
+                default:
+                    return; // Quit when this doesn't handle the key event.
+            }
+
+        });
+
 
 
     }
@@ -102,29 +117,7 @@ export class Lightbox {
         this.backgroundMaskLightbox.style.display = "none";
     }
 
-    bindKey (){
-        window.addEventListener("keydown", function (event) {
 
-            switch (event.key) {
-
-                case "Left": // IE/Edge specific value
-                case "ArrowLeft":
-                    previousIMG();
-                    break;
-                case "Right": // IE/Edge specific value
-                case "ArrowRight":
-                    nextIMG();
-                    break;
-                case "Esc": // IE/Edge specific value
-                case "Escape":
-                    closeLightbox();
-                    break;
-                default:
-                    return; // Quit when this doesn't handle the key event.
-            }
-
-        }, true);
-    }
 
 
     nextIMG (){
