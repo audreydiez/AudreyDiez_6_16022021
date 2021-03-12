@@ -57,9 +57,11 @@ h3 {
     transition: all 0.2s ease-in-out;
     margin: 0.2rem;
 
-    &:hover, &:focus {
+    &:hover, &:focus, &--selected{
         @include hastag-style(true);
     }
+
+
 
 
 }

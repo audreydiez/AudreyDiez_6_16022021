@@ -40,10 +40,6 @@ export class Router {
 
         new photographerBuilder(photographerDetail[0], photographerMedias);
 
-
-
-
-
     }
 
     reachIndex (){

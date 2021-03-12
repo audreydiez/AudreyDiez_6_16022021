@@ -1,3 +1,4 @@
+import {Tags} from "./tags";
 
 
 export class IndexBuilder{
@@ -11,6 +12,7 @@ export class IndexBuilder{
         if (document.getElementById("main-index") != null){
 
             this.renderPhotographersList();
+            this.renderTagsList();
         }
 
     }
@@ -54,6 +56,11 @@ export class IndexBuilder{
 
         });
 
+    }
+
+    renderTagsList () {
+        new Tags();
+        Tags.test();
     }
 
 }

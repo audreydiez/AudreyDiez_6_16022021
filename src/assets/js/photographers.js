@@ -37,4 +37,8 @@ export class Photographers {
         return photographerDetail;
     }
 
+    getPhotographersByTags (tags){
+
+    }
+
 }
