@@ -59,7 +59,7 @@ export class IndexBuilder{
     }
 
     renderTagsList () {
-        new Tags();
+        new Tags(this.photographers);
         Tags.test();
     }
 
