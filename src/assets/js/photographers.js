@@ -43,16 +43,30 @@ export class Photographers {
 
          const photographersSelected = [];
 
+         // For each photographer
          this.photographers.forEach( photographer => {
-             //console.log(photographer.tags)
+
+
+             // For each tag of each photographer
              photographer.tags.forEach(photographerTag => {
-                 //console.log(photographerTag)
+
+
+                 // For each tag selected by user
                  tags.forEach( tag => {
 
+                     // Check if tag match with photographer tag
                      if (tag.toString().toLowerCase() === photographerTag.toString().toLowerCase()){
-                         //console.log(photographer)
-                         photographersSelected.push(photographer);
-                         //console.log(photographersSelected);
+
+                         // Check if already pushed
+                         if(photographersSelected.some(photographerS => photographerS.id === photographer.id)){
+                             console.log("Object found inside the array." + photographer);
+
+                         } else{
+
+                             // Finally push in the array
+                             photographersSelected.push(photographer);
+                         }
+
                      }
                  })
              })
@@ -60,22 +74,10 @@ export class Photographers {
 
          })
 
-
-        //  this.photographers.forEach( photographer => {
-        //      console.log(photographer)
-        //     photographer.tags.forEach( photographerTag => {
-        //         tags.forEach (tag => {
-        //             if (tag === photographerTag.toString()){
-        //                 photographersSelected.push(photographer);
-        //                 console.log(photographersSelected);
-        //             }
-        //         })
-        //     })
-        // })
-
-
+         console.log(photographersSelected);
 
     }
+
 
 
 

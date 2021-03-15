@@ -18,7 +18,7 @@ export class Tags {
             "Events"
             ];
 
-        this.selectedTags = [];
+        this.selectedTags = this.tags;
 
         this.init();
 
@@ -64,11 +64,6 @@ export class Tags {
             childElement.setAttribute("value", "selected");
             childElement.classList.add("hashtag--selected");
             this.selectedTags.push(childElement.id)
-
-            // Display photographers with this tag
-            //console.log(this.selectedTags)
-            this.photographersInstance.getPhotographersByTags(this.selectedTags);
-
             console.log(this.selectedTags)
 
         } else if (childElement.getAttribute("value") === "selected") {
@@ -86,6 +81,9 @@ export class Tags {
             this.selectedTags = this.tags;
             console.log(this.selectedTags)
         }
+
+        // Display photographers with this tag
+        this.photographersInstance.getPhotographersByTags(this.selectedTags);
 
 
 
