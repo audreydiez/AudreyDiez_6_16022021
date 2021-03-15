@@ -1,4 +1,5 @@
 import {Photographers} from "./photographers";
+import {IndexBuilder} from "./indexBuilder";
 
 export class Tags {
 
@@ -37,7 +38,7 @@ export class Tags {
             parentElement.appendChild(childElement);
 
             childElement.addEventListener("click", e =>{
-                this.setStyleComportment(childElement)
+                this.setComportment(childElement)
             })
 
         });
@@ -51,7 +52,13 @@ export class Tags {
         console.log("test");
     }
 
-    setStyleComportment (childElement) {
+    setComportment (childElement) {
+
+        //IndexBuilder.removePhotographersList();
+
+        if (this.selectedTags === this.tags){
+            this.selectedTags = [];
+        }
 
         if (childElement.getAttribute("value") === "unselected") {
             childElement.setAttribute("value", "selected");
@@ -62,7 +69,7 @@ export class Tags {
             //console.log(this.selectedTags)
             this.photographersInstance.getPhotographersByTags(this.selectedTags);
 
-            //console.log(this.selectedTags)
+            console.log(this.selectedTags)
 
         } else if (childElement.getAttribute("value") === "selected") {
 
@@ -73,8 +80,15 @@ export class Tags {
                 let id = this.selectedTags.indexOf(childElement.id);
                 this.selectedTags.splice(id,1);
                 console.log(this.selectedTags)
-
         }
+
+        if (this.selectedTags.length < 1) {
+            this.selectedTags = this.tags;
+            console.log(this.selectedTags)
+        }
+
+
+
 
 
 

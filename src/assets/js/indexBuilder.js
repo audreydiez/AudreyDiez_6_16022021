@@ -21,8 +21,8 @@ export class IndexBuilder{
         this.photographers.photographers.forEach(photographer => {
 
             // Article creation
-            const childElement = document.createElement("article");
-            const parentElement = document.getElementById("main-index");
+            let childElement = document.createElement("article");
+            let parentElement = document.getElementById("main-index");
 
             childElement.classList.add("ph-cards__card");
             childElement.setAttribute("id", "ph-card");
@@ -56,11 +56,26 @@ export class IndexBuilder{
 
         });
 
+
+
+    }
+
+    removePhotographersList (){
+
+        let parentsElements = document.getElementsByClassName("ph-cards__card");
+        console.log(parentsElements);
+
+        for (let element of parentsElements){
+            //element.remove();
+        }
+
     }
 
     renderTagsList () {
+
         new Tags(this.photographers);
         Tags.test();
     }
+
 
 }

@@ -46,6 +46,7 @@ export class Router {
 
         new IndexBuilder(this.photographers);
 
+
     }
 
 }
