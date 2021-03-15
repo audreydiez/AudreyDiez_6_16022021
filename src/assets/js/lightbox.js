@@ -27,7 +27,7 @@ export class Lightbox {
 
         let index = 0;
         this.links.forEach(link => {
-            console.log(link.pathname)
+            //console.log(link.pathname)
             link.index = index;
             link.addEventListener('click', e => {
                 e.preventDefault();

@@ -10,7 +10,7 @@ export class IndexBuilder{
         if (document.getElementById("main-index") != null){
 
             this.renderPhotographersList(this.photographers.photographers);
-            this.renderTagsList();
+
         }
 
     }
@@ -57,9 +57,6 @@ export class IndexBuilder{
             parentElement.appendChild(childElement);
 
         });
-
-
-
     }
 
     removePhotographersList (){
@@ -74,10 +71,7 @@ export class IndexBuilder{
 
     }
 
-    renderTagsList () {
-        //this.removePhotographersList()
 
-    }
 
 
 }

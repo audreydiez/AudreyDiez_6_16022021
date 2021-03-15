@@ -21,6 +21,7 @@ export class photographerBuilder{
 
         this.displayProfile();
         this.displayMedia();
+        this.setComportmentLikesCounter();
     }
 
     displayProfile (){
@@ -88,8 +89,8 @@ export class photographerBuilder{
                   </a>
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2>
-                       <div class="price">${media.price} €</div>
-                       <div class="likes">${media.likes} <i class="fas fa-heart"></i></div>
+                       <p class="price">${media.price}€</p>
+                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes}</span><i class="fas fa-heart"></i></a>
                   </figcaption>
               </figure>  
             `;
@@ -97,8 +98,38 @@ export class photographerBuilder{
             parentElement.appendChild(childElement);
         })
 
+        // Lightbox creation
         new Lightbox();
+
+    }
+
+    setComportmentLikesCounter (){
+
+        let likesBlock = document.getElementsByClassName("likesBlock");
+        likesBlock= Array.from(likesBlock);
+
+
+        likesBlock.forEach(likeBlock => {
+
+            likeBlock.addEventListener("click", e =>{
+                e.preventDefault()
+                let like = likeBlock.getElementsByClassName("likes");
+                like= Array.from(like);
+
+
+                like[0].innerHTML = (parseInt(like[0].innerHTML) + 1).toString();
+                this.incrementLike();
+            })
+        })
 
 
     }
+
+    incrementLike (){
+
+
+
+
+    }
+
 }

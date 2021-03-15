@@ -85,7 +85,7 @@ export class Tags {
         // Get photographers with this tag
         let photographersSelected = this.photographersInstance.getPhotographersByTags(this.selectedTags);
         photographersSelected = Array.from(photographersSelected)
-        console.log(photographersSelected);
+        //console.log(photographersSelected);
         this.indexBuilderInstance.renderPhotographersList(photographersSelected);
 
 
