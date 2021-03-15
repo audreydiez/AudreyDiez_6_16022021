@@ -1,5 +1,3 @@
-import {Tags} from "./tags";
-
 
 export class IndexBuilder{
     constructor(photographers) {

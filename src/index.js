@@ -2,9 +2,7 @@ import "./assets/scss/style.scss";
 
 
 import { submitEngine } from "./assets/js/contact_form";
-import {Lightbox} from "./assets/js/lightbox";
 import {App} from "./app";
-const backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
 const JSON_url = "./src/data.json";
 
 

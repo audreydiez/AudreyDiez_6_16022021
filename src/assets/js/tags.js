@@ -1,5 +1,3 @@
-import {Photographers} from "./photographers";
-import {IndexBuilder} from "./indexBuilder";
 
 export class Tags {
 
@@ -39,6 +37,7 @@ export class Tags {
             parentElement.appendChild(childElement);
 
             childElement.addEventListener("click", e =>{
+                e.preventDefault()
                 this.setComportment(childElement)
             })
 

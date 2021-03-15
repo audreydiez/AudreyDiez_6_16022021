@@ -1,6 +1,5 @@
 import { IndexBuilder } from "./indexBuilder";
 import { photographerBuilder } from "./photographerBuilder";
-import {Lightbox} from "./lightbox";
 import {Tags} from "./tags";
 
 export class Router {
