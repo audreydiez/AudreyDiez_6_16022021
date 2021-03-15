@@ -74,8 +74,8 @@ export class Photographers {
 
          })
 
-         console.log(photographersSelected);
-
+         //console.log(photographersSelected);
+         return photographersSelected;
     }
 
 

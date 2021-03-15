@@ -11,14 +11,18 @@ export class IndexBuilder{
     init(){
         if (document.getElementById("main-index") != null){
 
-            this.renderPhotographersList();
+            this.renderPhotographersList(this.photographers.photographers);
             this.renderTagsList();
         }
 
     }
 
-    renderPhotographersList (){
-        this.photographers.photographers.forEach(photographer => {
+    renderPhotographersList (photographers){
+
+        console.log(photographers)
+        this.removePhotographersList();
+
+        photographers.forEach(photographer => {
 
             // Article creation
             let childElement = document.createElement("article");
@@ -62,19 +66,19 @@ export class IndexBuilder{
 
     removePhotographersList (){
 
-        let parentsElements = document.getElementsByClassName("ph-cards__card");
-        console.log(parentsElements);
+        let parentsElements = document.getElementsByTagName("article");
+        //console.log(parentsElements);
 
-        for (let element of parentsElements){
-            //element.remove();
+        // Remove each node in reverse order
+        for (let i = parentsElements.length - 1; i >= 0; --i) {
+            parentsElements[i].remove();
         }
 
     }
 
     renderTagsList () {
+        //this.removePhotographersList()
 
-        new Tags(this.photographers);
-        Tags.test();
     }
 
 

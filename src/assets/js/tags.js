@@ -3,9 +3,10 @@ import {IndexBuilder} from "./indexBuilder";
 
 export class Tags {
 
-    constructor(photographersInstance) {
+    constructor(photographersInstance, indexBuilderInstance) {
 
         this.photographersInstance = photographersInstance;
+        this.indexBuilderInstance = indexBuilderInstance;
 
         this.tags = [
             "Portrait",
@@ -82,8 +83,11 @@ export class Tags {
             console.log(this.selectedTags)
         }
 
-        // Display photographers with this tag
-        this.photographersInstance.getPhotographersByTags(this.selectedTags);
+        // Get photographers with this tag
+        let photographersSelected = this.photographersInstance.getPhotographersByTags(this.selectedTags);
+        photographersSelected = Array.from(photographersSelected)
+        console.log(photographersSelected);
+        this.indexBuilderInstance.renderPhotographersList(photographersSelected);
 
 
 

@@ -1,6 +1,7 @@
 import { IndexBuilder } from "./indexBuilder";
 import { photographerBuilder } from "./photographerBuilder";
 import {Lightbox} from "./lightbox";
+import {Tags} from "./tags";
 
 export class Router {
 
@@ -44,8 +45,9 @@ export class Router {
 
     reachIndex (){
 
-        new IndexBuilder(this.photographers);
-
+        const indexBuilderInstance = new IndexBuilder(this.photographers);
+        new Tags(this.photographers, indexBuilderInstance);
+        Tags.test();
 
     }
 
