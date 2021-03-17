@@ -17,6 +17,16 @@
         min-height: 40px;
         min-width: 170px;
     }
+
+    &-select {
+        margin-left: 1rem;
+        text-align: left;
+        width: 200px;
+
+        & .fas{
+            float: right;
+        }
+    }
 }
 
 .bottom-contact{

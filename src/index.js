@@ -3,6 +3,7 @@ import "./assets/scss/style.scss";
 
 import { submitEngine } from "./assets/js/contact_form";
 import {App} from "./app";
+import { } from "./assets/js/custom-select";
 const JSON_url = "./src/data.json";
 
 
@@ -31,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-
-
 
 
 export function setModalForm () {
@@ -73,6 +72,9 @@ function launchEngine(e) {
     submitEngine();
 
 }
+
+
+
 
 
 

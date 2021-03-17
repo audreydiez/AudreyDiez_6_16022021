@@ -22,12 +22,38 @@
     <main class="main" id="main-photographer-detail">
 
 
-        <label for="filters" class="filters-label">Trier par </label>
-        <select name="filters" id="filters" class="filters">
-            <option value="popularity" class="filters-options">Popularité</option>
-            <option value="date" class="filters-options">Date</option>
-            <option value="title" class="filters-options">Titre</option>
-        </select>
+
+
+
+
+
+        <div id="focus-filters"></div>
+        <div class="filters">
+            <label id="select-label" class="select-label">Trier par :</label>
+
+            <div class="select-wrapper" id="select-wrapper">
+                <button id="button-select"
+                        type="button"
+                        role="button"
+                        class="btn btn-select button-select"
+                        aria-haspopup="listbox"
+                        aria-expanded="true"
+                        aria-labelledby="label button">
+                    Popularité
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+
+                <ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1" expanded="false">
+                    <li id="popularity" role="option" class="option"><a href="#">Popularité</a> <i class="fas fa-chevron-down"></i></li>
+                    <li id="date" role="option" class="option"><a href="#">Date</a></li>
+                    <li id="title" role="option" class="option"><a href="#">Titre</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
 
         <div class="pictures" id="pictures">
 
