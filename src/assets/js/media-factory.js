@@ -1,6 +1,7 @@
 import {VideoFactory} from "./video-factory";
 import {ImageFactory} from "./image-factory";
 
+
 export class MediaFactory {
 
     // retourne tableau de médias
@@ -52,6 +53,30 @@ export class MediaFactory {
 
         return media;
 
+    }
+
+    static sortMedias (medias, filter) {
+        //console.log(filter)
+        console.log(medias)
+
+        let sortingMedias = [];
+
+        if (filter === "popularity"){
+
+
+        }
+        else if (filter === "date"){
+
+
+        }
+        else if (filter === "title"){
+
+
+
+
+            console.log(medias)
+
+        }
     }
 
 

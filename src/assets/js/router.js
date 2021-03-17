@@ -1,6 +1,7 @@
 import { IndexBuilder } from "./indexBuilder";
 import { photographerBuilder } from "./photographerBuilder";
 import {Tags} from "./tags";
+import {CustomSelect} from "./custom-select";
 
 export class Router {
 
@@ -39,6 +40,7 @@ export class Router {
         let photographerMedias = this.medias.GetMediasByPhotographer(id);
 
         new photographerBuilder(photographerDetail[0], photographerMedias);
+        new CustomSelect(photographerMedias);
 
     }
 

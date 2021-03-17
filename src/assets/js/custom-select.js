@@ -1,53 +1,76 @@
-// SELECT
-const filtersWrapper = document.getElementById("select-wrapper");
-const filterBtn = document.getElementById("button-select");
-const filterList = document.getElementById("list");
+import { MediaFactory} from "./media-factory";
 
-const backgroundSelect = document.getElementById("focus-filters");
+export class CustomSelect {
+    constructor(photographerMedias) {
+        this.photographerMedias = photographerMedias;
+        this.filtersWrapper = document.getElementById("select-wrapper");
+        this.filterBtn = document.getElementById("button-select");
+        this.filterList = document.getElementById("list");
 
-const options = Array.from(document.getElementsByClassName("option"));
-let selected;
+        this.backgroundSelect = document.getElementById("focus-filters");
 
+        this.options = Array.from(document.getElementsByClassName("option"));
+        this.selected = null;
 
-// Hide list filters
-filterList.style.display = "none";
-
-
-filterBtn.addEventListener("click", e => {
-    e.preventDefault();
-    expandList();
-});
+        // Hide list filters
+        this.filterList.style.display = "none";
 
 
-function expandList (){
-    if (filterList.getAttribute("expanded") === "false"){
-        filterList.style.display = "flex";
-        filterList.setAttribute("expanded", "true");
-        backgroundSelect.style.display = "flex";
+        this.filterBtn.addEventListener("click", e => {
+            e.preventDefault();
+            this.expandList();
+        });
 
+        this.filtersWrapper.addEventListener("click", (e) => e.stopPropagation());
+        this.backgroundSelect.addEventListener("click", this.closeList);
+
+        this.options.forEach(option => {
+            option.addEventListener("click", e => {
+                e.preventDefault();
+                if (this.filterList.getAttribute("expanded") === "true"){
+                    this.closeList();
+                    this.selected = option.getAttribute("id");
+                    MediaFactory.sortMedias(this.photographerMedias, this.selected);
+
+                }
+                this.filterList.addEventListener('click', (e) => e.stopPropagation());
+
+
+            })
+        })
+
+    }
+
+    expandList (){
+        if (this.filterList.getAttribute("expanded") === "false"){
+            this.filterList.style.display = "flex";
+            this.filterList.setAttribute("expanded", "true");
+            this.backgroundSelect.style.display = "flex";
+
+        }
+    }
+
+    closeList () {
+        this.filterList.setAttribute("expanded", "false");
+        this.filterList.style.display = "none";
+        this.backgroundSelect.style.display = "none";
     }
 }
 
-filtersWrapper.addEventListener("click", (e) => e.stopPropagation());
-backgroundSelect.addEventListener("click", closeList);
+
+// SELECT
 
 
-options.forEach(option => {
-    option.addEventListener("click", e => {
-        e.preventDefault();
-        if (filterList.getAttribute("expanded") === "true"){
-            closeList();
-            selected = option.getAttribute("id");
-        }
-        filterList.addEventListener('click', (e) => e.stopPropagation());
 
 
-    })
-})
 
-function closeList () {
-    filterList.setAttribute("expanded", "false");
-    filterList.style.display = "none";
-    backgroundSelect.style.display = "none";
-}
+
+
+
+
+
+
+
+
+
 //SELECT
