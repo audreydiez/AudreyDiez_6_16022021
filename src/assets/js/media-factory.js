@@ -63,18 +63,30 @@ export class MediaFactory {
 
         if (filter === "popularity"){
 
+            sortingMedias = [...medias].sort( (a,b) => {
+                return b.likes - a.likes;
+            })
+            console.log(sortingMedias)
 
         }
         else if (filter === "date"){
+            sortingMedias = [...medias].sort( (a,b) => {
 
+                let dateA = new Date(a.date.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"))
+
+
+                let dateB = new Date(b.date.replace( /(\d{2})-(\d{2})-(\d{4})/, "$2/$1/$3"))
+
+
+                return dateB - dateA;
+            })
+            console.log(sortingMedias)
 
         }
         else if (filter === "title"){
 
-
-
-
-            console.log(medias)
+            sortingMedias = [...medias].sort( (a,b) => a.name.localeCompare(b.name))
+            console.log(sortingMedias)
 
         }
     }
