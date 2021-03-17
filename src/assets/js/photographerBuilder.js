@@ -20,8 +20,8 @@ export class photographerBuilder{
     renderPhotographer (){
 
         this.displayProfile();
-        this.displayMedia();
-        this.setComportmentLikesCounter();
+        this.displayMedia(this.photographerMedias);
+
     }
 
     displayProfile (){
@@ -56,7 +56,9 @@ export class photographerBuilder{
 
     }
 
-    displayMedia (){
+    displayMedia (medias){
+
+        this.removePicturesList();
 
         //console.log(this.photographerMedias);
         // Bind to DOM
@@ -65,9 +67,7 @@ export class photographerBuilder{
         // image / video thumbnail
         let thumbnail = '';
 
-
-
-        this.photographerMedias.forEach( media => {
+        medias.forEach( media => {
             //console.log(media.url +","+ media.type)
 
             if (media.type === "video"){
@@ -100,7 +100,8 @@ export class photographerBuilder{
 
         // Lightbox creation
         new Lightbox();
-
+        // Likes counter
+        this.setComportmentLikesCounter();
     }
 
     setComportmentLikesCounter (){
@@ -118,17 +119,22 @@ export class photographerBuilder{
 
 
                 like[0].innerHTML = (parseInt(like[0].innerHTML) + 1).toString();
-                this.incrementLike();
+
             })
         })
 
 
     }
 
-    incrementLike (){
+    removePicturesList (){
 
+        let parentsElements = document.getElementsByTagName("article");
+        //console.log(parentsElements);
 
-
+        // Remove each node in reverse order
+        for (let i = parentsElements.length - 1; i >= 0; --i) {
+            parentsElements[i].remove();
+        }
 
     }
 

@@ -1,8 +1,11 @@
 import { MediaFactory} from "./media-factory";
 
 export class CustomSelect {
-    constructor(photographerMedias) {
+    constructor(photographerMedias, photographerBuilderInstance) {
+
         this.photographerMedias = photographerMedias;
+        this.photographerBuilderInstance = photographerBuilderInstance;
+
         this.filtersWrapper = document.getElementById("select-wrapper");
         this.filterBtn = document.getElementById("button-select");
         this.filterList = document.getElementById("list");
@@ -30,7 +33,12 @@ export class CustomSelect {
                 if (this.filterList.getAttribute("expanded") === "true"){
                     this.closeList();
                     this.selected = option.getAttribute("id");
-                    MediaFactory.sortMedias(this.photographerMedias, this.selected);
+
+                    // Sorting
+                    this.sortedMedia = MediaFactory.sortMedias(this.photographerMedias, this.selected);
+                    console.log(this.sortedMedia);
+                    // Display
+                    this.photographerBuilderInstance.displayMedia(this.sortedMedia);
 
                 }
                 this.filterList.addEventListener('click', (e) => e.stopPropagation());
@@ -38,6 +46,8 @@ export class CustomSelect {
 
             })
         })
+
+        return this.sortedMedia;
 
     }
 

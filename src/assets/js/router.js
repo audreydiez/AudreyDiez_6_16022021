@@ -39,8 +39,13 @@ export class Router {
         let photographerDetail = this.photographers.getPhotographerById(id);
         let photographerMedias = this.medias.GetMediasByPhotographer(id);
 
-        new photographerBuilder(photographerDetail[0], photographerMedias);
-        new CustomSelect(photographerMedias);
+
+
+        const photographerBuilderInstance = new photographerBuilder(photographerDetail[0], photographerMedias);
+        new CustomSelect(photographerMedias, photographerBuilderInstance);
+
+
+
 
     }
 
