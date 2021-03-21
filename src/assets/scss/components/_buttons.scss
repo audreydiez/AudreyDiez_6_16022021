@@ -36,18 +36,13 @@
     left: 50%;
     transform: translate(-50%,0);
 
-    @include breakpoint(sm){
-        position: fixed;
-        top: 120px;
-        left: 55%;
-        transform: none;
-        width: 80px;
-        height: 30px;
+    @include breakpoint(xs){
+
     }
     @include breakpoint(md){
-        position: fixed;
+        position: absolute;
         top: 175px;
-        left: 60%;
+        left: 50%;
         transform: none;
         width: 80px;
         height: 30px;

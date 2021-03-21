@@ -67,8 +67,14 @@ export class photographerBuilder{
         // image / video thumbnail
         let thumbnail = '';
 
+        // Total of likes
+        let likesTotalCount = 0;
+
         medias.forEach( media => {
             //console.log(media.url +","+ media.type)
+            console.log (media);
+
+            likesTotalCount += media.likes;
 
             if (media.type === "video"){
                 thumbnail = `<img src="assets/images/pictures/${media.poster}" alt="${media.description}" class="photo__img">`;
@@ -90,18 +96,20 @@ export class photographerBuilder{
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2>
                        <p class="price">${media.price}€</p>
-                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes}</span><i class="fas fa-heart"></i></a>
+                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes} </span><i class="fas fa-heart"></i></a>
                   </figcaption>
               </figure>  
             `;
 
             parentElement.appendChild(childElement);
+
         })
 
         // Lightbox creation
         new Lightbox();
         // Likes counter
         this.setComportmentLikesCounter();
+        this.setTotalLikescounter(likesTotalCount);
     }
 
     setComportmentLikesCounter (){
@@ -136,6 +144,11 @@ export class photographerBuilder{
             parentsElements[i].remove();
         }
 
+    }
+
+    setTotalLikescounter(likesTotal){
+        let tag = document.getElementById("day-rate__likes");
+        tag.innerHTML = likesTotal + ` <i class="fas fa-heart"></i>`
     }
 
 }

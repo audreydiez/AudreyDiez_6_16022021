@@ -10,15 +10,18 @@
     &__card{
         flex-basis: 100%;
         text-align: center;
+        margin-bottom: 2rem;
 
 
         @include breakpoint(sm){
             padding-top: 2rem;
             flex-basis: 50%;
+            margin-bottom: 0rem;
         }
         @include breakpoint(lg){
             padding-top: 4rem;
             flex-basis: 33.33333%;
+            margin-bottom: 0rem;
         }
 
 

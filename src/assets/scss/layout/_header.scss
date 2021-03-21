@@ -25,7 +25,7 @@
 
         .logo{
             width: 80%;
-            max-width: 150px;
+            max-width: 120px;
 
             @include breakpoint(lg){
                 min-width: 200px;
@@ -94,6 +94,12 @@
 
         @include breakpoint(sm){
             max-width: 200px;
+
+        }
+        @include breakpoint(md){
+
+            margin-left: 1rem;
+
         }
     }
 

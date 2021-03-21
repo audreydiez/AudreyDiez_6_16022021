@@ -13,6 +13,8 @@ export class CustomSelect {
         this.backgroundSelect = document.getElementById("focus-filters");
 
         this.options = Array.from(document.getElementsByClassName("option"));
+
+
         this.selected = null;
 
         // Hide list filters
@@ -39,6 +41,27 @@ export class CustomSelect {
                     console.log(this.sortedMedia);
                     // Display
                     this.photographerBuilderInstance.displayMedia(this.sortedMedia);
+                    // Change select btn name
+                    if (this.selected === "date") {
+                        this.filterBtn.innerHTML = `   
+                                                Date                                              
+                                                <i class="fas fa-chevron-up"></i>
+                                                `   ;
+                    }
+                    if (this.selected === "popularity") {
+                        this.filterBtn.innerHTML = `  
+                                                   Popularité                                               
+                                                <i class="fas fa-chevron-up"></i>
+                                                `   ;
+                    }
+                    if (this.selected === "title") {
+                        this.filterBtn.innerHTML = ` 
+                                                Titre                                                
+                                                <i class="fas fa-chevron-up"></i>
+                                                `   ;
+                    }
+
+
 
                 }
                 this.filterList.addEventListener('click', (e) => e.stopPropagation());
