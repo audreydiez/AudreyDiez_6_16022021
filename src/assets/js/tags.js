@@ -68,7 +68,7 @@ export class Tags {
             childElement.setAttribute("value", "selected");
             childElement.classList.add("hashtag--selected");
             this.selectedTags.push(childElement.id)
-            console.log(this.selectedTags)
+            console.log(childElement)
 
         } else if (childElement.getAttribute("value") === "selected") {
 

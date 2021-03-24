@@ -118,6 +118,7 @@ function toggleErrorMsg (input){
     // Notification under each input
     let element = document.getElementById(input.toString() + "-msg");
     element.style.display = "block";
+    element.setAttribute("role", "alert");
     eval(input).style.border = "2px solid #901C1C";
     element.innerHTML = formCheck.messages[input];
 }

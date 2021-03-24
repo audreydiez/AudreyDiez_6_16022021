@@ -95,6 +95,10 @@
             }
         }
 
+        & .title{
+            opacity: 0;
+        }
+
         & .loader img{
             position: absolute;
             z-index: 1;

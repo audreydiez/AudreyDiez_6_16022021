@@ -25,9 +25,7 @@ const lastBtnModal = document.getElementById("lastBtnModal");
 
 
 
-contactFormContent.addEventListener("transitionend", e => {
-       contactFormContent.querySelector("input").focus();
-});
+
 
 
 

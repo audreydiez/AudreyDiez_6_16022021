@@ -78,8 +78,7 @@
 
     <div id="backgroundMask" aria-hidden="true">
         <div id="contactFormModal" role="dialog" aria-labelledby="contactForm">
-            <button class="closeModal" id="closeModalOff" title="Close contact form">
-                <i class="fas fa-times fa-2x"></i>
+            <button class="closeModal" id="closeModalOff" aria-hidden="true">
             </button>
             <button class="closeModal" id="closeModal" title="Close contact form">
                 <i class="fas fa-times fa-2x"></i>
@@ -131,7 +130,9 @@
 
     <div id="backgroundMaskLightbox" aria-hidden="true">
         <div class="lightbox" id="lightbox">
-            <button class="lightbox__close close-btn"><span class="sr-only">Fermer</span><i class="fas fa-times fa-3x"></i></button>
+
+
+            <button class="lightbox__close close-btn" id="closeLightbox"><span class="sr-only">Fermer</span><i class="fas fa-times fa-3x"></i></button>
             <button class="lightbox__next" id="next"><span class="sr-only">Suivant</span><i class="fas fa-chevron-right fa-3x"></i></button>
             <button class="lightbox__prev" id="previous"><span class="sr-only">Précédent</span><i class="fas fa-chevron-left fa-3x"></i></button>
             <div class="lightbox__container" id="lightbox__container">
@@ -144,6 +145,7 @@
                     <source src=""
                             type="video/mp4" id="video-pushed">
                 </video>
+                <button class="title" id="lightboxTitle" aria-hidden="true"></button>
 
             </div>
         </div>

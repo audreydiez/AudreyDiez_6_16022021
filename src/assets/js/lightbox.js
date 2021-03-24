@@ -70,6 +70,13 @@ export class Lightbox {
             }
 
         });
+        console.log(document.getElementById("video-tag"))
+        // Keep focus in modal
+        document.getElementById("lightboxTitle").addEventListener('keydown', (e) => {
+            if (e.keyCode === 9 ) {
+                document.getElementById('closeLightbox').focus();
+            }
+        });
 
 
 
@@ -108,14 +115,14 @@ export class Lightbox {
 
     openLightbox (){
         this.backgroundMaskLightbox.style.display = "flex";
+        document.getElementById('closeLightbox').focus();
 
     }
 
     closeLightbox (){
         this.backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
-
         this.backgroundMaskLightbox.style.display = "none";
-    }
+            }
 
 
 
