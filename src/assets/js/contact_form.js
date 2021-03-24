@@ -11,6 +11,7 @@ const ariaErrorBloc = document.getElementById("errors-display");
 
 
 
+
 const formCheck = {
     global : false,
     inputs : {

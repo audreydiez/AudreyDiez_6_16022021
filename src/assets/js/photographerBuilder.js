@@ -72,7 +72,7 @@ export class photographerBuilder{
 
         medias.forEach( media => {
             //console.log(media.url +","+ media.type)
-            console.log (media);
+            //console.log (media);
 
             likesTotalCount += media.likes;
 

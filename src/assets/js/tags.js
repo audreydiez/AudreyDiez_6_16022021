@@ -32,8 +32,12 @@ export class Tags {
             const childElement = document.createElement("li");
             childElement.classList.add("filters-list__filter", "hashtag");
             childElement.setAttribute("id", tag);
+            childElement.setAttribute("title", tag);
             childElement.setAttribute("value", "unselected");
-            childElement.innerText = "#" + tag;
+
+            childElement.innerHTML =`
+                                    <a href="#" title="${tag}">#${tag}</a>
+            `;
             parentElement.appendChild(childElement);
 
             childElement.addEventListener("click", e =>{

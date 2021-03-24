@@ -43,11 +43,8 @@
 
 
 
-
-
-
-
-
-
-
+}
+#contactFormModal[open]:not(:focus-within) {
+    background-color: rgb(219, 136, 117);
+    transition: background-color 0.01s;
 }

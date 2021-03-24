@@ -12,26 +12,24 @@ new App(JSON_url);
 
 
 
-
-const ENV_prod = true;
-
-
 const contactFormBtn = document.querySelectorAll(".contactForm");
 const backgroundMask = document.getElementById("backgroundMask");
 const contactFormContent = document.getElementById("contactFormModal");
 const closeModalBtn = document.querySelectorAll(".closeModal");
 
+const goToContent = document.getElementById("go-content");
+
+//const mainContent = document.getElementById("main-photographer-detail");
+
+const lastBtnModal = document.getElementById("lastBtnModal");
 
 
-// If we are in dev mode, display all elements for screen readers
-document.addEventListener("DOMContentLoaded", function() {
-    if (!ENV_prod){
-        let elements = document.querySelectorAll('.sr-only');
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.remove("sr-only");
-        }
-    }
+
+contactFormContent.addEventListener("transitionend", e => {
+       contactFormContent.querySelector("input").focus();
 });
+
+
 
 
 export function setModalForm () {
@@ -44,34 +42,53 @@ export function setModalForm () {
         contactFormContent.addEventListener('click', (e) => e.stopPropagation());
         backgroundMask.addEventListener('click',  closeContactForm);
         closeModalBtn.forEach((btn) => btn.addEventListener("click", closeContactForm));
+
+        // Keep focus in modal
+        lastBtnModal.addEventListener('keydown', (e) => {
+            if (e.keyCode === 9 ) {
+               document.getElementById('closeModalOff').focus();
+            }
+        });
+
     }
 }
-
-
-
-
-
-
 
 
 
 function openContactForm() {
     backgroundMask.style.display = "flex";
 
-
+    document.getElementById('closeModal').focus();
 }
 
 function closeContactForm() {
     backgroundMask.style.display = "none";
+
+
 }
 
 function launchEngine(e) {
-
 
     e.preventDefault();
     submitEngine();
 
 }
+
+window.addEventListener("scroll",function(){
+
+    if(document.getElementById("go-content") != null){
+        if(window.pageYOffset > 100){
+            goToContent.style.display = "block";
+        }
+        else if(window.pageYOffset < 100){
+            goToContent.style.display = "none";
+        }
+    }
+
+
+},false);
+
+
 
 
 

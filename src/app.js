@@ -56,6 +56,9 @@ export class App {
         new Router(this.photographers, this.medias);
         //console.log(this.medias);
         setModalForm();
+
+
+
     }
 
 

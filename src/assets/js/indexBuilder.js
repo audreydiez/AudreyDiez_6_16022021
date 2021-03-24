@@ -33,7 +33,7 @@ export class IndexBuilder{
 
             // Tags creation
             photographer.tags.forEach(tag => {
-                tags += `<li class="hashtag">#<span class="sr-only">Tag</span>${tag}</li>`;
+                tags += `<li class="hashtag">#<span class="sr-only" title="${tag}">Tag</span>${tag}</li>`;
             })
 
             // Fill the article
