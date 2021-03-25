@@ -1,17 +1,1 @@
-
-export class Photographer {
-
-    constructor(id, name, city, country, tags, tagline, price, portrait) {
-        this.id = id;
-        this.name = name;
-        this.city = city;
-        this.country = country;
-        this.tags = tags;
-        this.tagline = tagline;
-        this.price = price;
-        this.portrait = portrait;
-    }
-
-
-
-}
+export class Photographer{constructor(t,i,s,h,r,o,a,c){this.id=t,this.name=i,this.city=s,this.country=h,this.tags=r,this.tagline=o,this.price=a,this.portrait=c}}
