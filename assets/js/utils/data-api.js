@@ -1,7 +1,7 @@
 export class DataApi {
   constructor() {
 
-    this.url =  "https://raw.githubusercontent.com/audreydiez/AudreyDiez_6_16022021/gh-pages/data.json";
+    this.url =  "./data.json";
   }
 
   async getData() {
