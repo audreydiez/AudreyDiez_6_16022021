@@ -10,12 +10,15 @@ export class Router {
         this.medias = medias;
         this.data = data;
         this.routeListenner();
+        this.reachIndex();
         console.log("router")
     }
 
     routeListenner (){
-        this.reachIndex();
+
         console.log("route listenner")
+
+
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
                 this.reachIndex();
