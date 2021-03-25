@@ -1,0 +1,92 @@
+.btn{
+    background-color: $colour-primary;
+    color: $font-colour-light;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    min-width: 150px;
+    height: auto;
+    text-align: center;
+    span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 120px;
+        transform: translate(-50%,-50%);
+    }
+    @include breakpoint(md){
+        min-height: 40px;
+        min-width: 170px;
+    }
+
+    &-select {
+        margin-left: 1rem;
+        text-align: left;
+        width: 200px;
+
+        & .fas{
+            float: right;
+        }
+    }
+}
+
+.bottom-contact{
+    z-index: 10;
+    display: inherit;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    @include breakpoint(xs){
+
+    }
+    @include breakpoint(md){
+        position: absolute;
+        z-index: 1;
+        top: 175px;
+        left: 50%;
+        transform: none;
+        width: 80px;
+        height: 30px;
+    }
+}
+
+.day-rate{
+    display: none;
+
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+    background-color: $primary-active;
+
+    @include breakpoint(md){
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__likes{
+        flex-grow: 1;
+    }
+    &__rate{
+
+    }
+
+}
+
+.content-tag{
+    display: none;
+    position: fixed;
+    background-color: $colour-secondary;
+    min-width: 170px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
