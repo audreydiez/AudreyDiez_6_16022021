@@ -1,4 +1,4 @@
-import { DataApi } from "./data-api";
+import { DataApi } from "../../../data-api";
 import { Photographers} from "../classes/photographers";
 import { Router} from "./router";
 import {MediaFactory} from "../classes_builders/media-factory";
