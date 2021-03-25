@@ -64,7 +64,7 @@ export class Lightbox {
             }
 
         });
-        console.log(document.getElementById("video-tag"))
+
 
         // Keep focus in modal
         document.getElementById("lightboxTitle").addEventListener('keydown', (e) => {
@@ -137,21 +137,21 @@ export class Lightbox {
         if(direction === "previous"){
             if(this.currentIndex === 0){
                 this.currentIndex = this.links.length - 1;
-                console.log(this.links.length + ", current : " + this.currentIndex);
+
             }
             else {
                 this.currentIndex --;
-                console.log(this.links.length + ", current : " + this.currentIndex);
+
             }
         }
         else if(direction === "next"){
             if(this.currentIndex === (this.links.length - 1)){
                 this.currentIndex = 0;
-                console.log(this.links.length + ", current : " + this.currentIndex);
+
             }
             else {
                 this.currentIndex ++;
-                console.log(this.links.length + ", current : " + this.currentIndex);
+
             }
         }
     }

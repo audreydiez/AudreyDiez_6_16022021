@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14e1dc61-cf63-4d15-9b93-1f10b89e21d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/js/classes/custom-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/classes_builders/indexBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/utils/data-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/contact_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/contact_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/custom-select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/data-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/image-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/image-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/lightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/like-counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/media-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes_builders/media-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/photographer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/photographer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes_builders/photographerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/photographers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/photographers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/utils/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/video-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/video-factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/photographer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/classes/lightbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/photographer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +33,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
@@ -74,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616680355614</updated>
-      <workItem from="1616680360201" duration="1670000" />
+      <workItem from="1616680360201" duration="2578000" />
     </task>
     <servers />
   </component>
