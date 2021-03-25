@@ -59,7 +59,7 @@ export class Photographers {
 
                          // Check if already pushed
                          if(photographersSelected.some(photographerS => photographerS.id === photographer.id)){
-                             console.log("Object found inside the array." + photographer);
+                             console.log("Object found inside the array.");
 
                          } else{
 
