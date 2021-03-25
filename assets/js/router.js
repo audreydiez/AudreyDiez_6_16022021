@@ -10,11 +10,11 @@ export class Router {
         this.medias = medias;
         this.data = data;
 
-        this.routeListenner();
+        this.router();
 
     }
 
-    routeListenner (){
+    router (){
 
 
         if ("onhashchange" in window) {
@@ -28,6 +28,7 @@ export class Router {
                 console.log(document.location.pathname )
             }
         }
+
         else {
             this.reachIndex();
         }
