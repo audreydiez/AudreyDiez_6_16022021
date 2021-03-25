@@ -11,7 +11,6 @@ export class VideoFactory {
         this.date = media.date;
         this.price = media.price;
         this.description = media.description;
-
         this.poster = this.setPosterToVideo(this.url);
 
     }

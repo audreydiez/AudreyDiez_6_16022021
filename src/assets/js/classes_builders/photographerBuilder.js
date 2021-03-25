@@ -1,4 +1,4 @@
-import {Lightbox} from "./lightbox";
+import {Lightbox} from "../classes/lightbox";
 
 
 export class photographerBuilder{
@@ -60,7 +60,7 @@ export class photographerBuilder{
 
         this.removePicturesList();
 
-        //console.log(this.photographerMedias);
+
         // Bind to DOM
         let parentElement = document.getElementById("pictures");
 
@@ -71,8 +71,7 @@ export class photographerBuilder{
         let likesTotalCount = 0;
 
         medias.forEach( media => {
-            //console.log(media.url +","+ media.type)
-            //console.log (media);
+
 
             likesTotalCount += media.likes;
 
@@ -137,7 +136,7 @@ export class photographerBuilder{
     removePicturesList (){
 
         let parentsElements = document.getElementsByTagName("article");
-        //console.log(parentsElements);
+
 
         // Remove each node in reverse order
         for (let i = parentsElements.length - 1; i >= 0; --i) {

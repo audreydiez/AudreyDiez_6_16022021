@@ -1,6 +1,3 @@
-/*
- Get fields
-*/
 
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
@@ -8,9 +5,6 @@ const email = document.getElementById("email");
 const message = document.getElementById("message");
 
 const ariaErrorBloc = document.getElementById("errors-display");
-
-
-
 
 const formCheck = {
     global : false,
@@ -39,7 +33,6 @@ const formCheck = {
 let errorTitle = document.createElement('p');
 errorTitle.textContent = formCheck.globalErrorMessage;
 if(ariaErrorBloc!== null) ariaErrorBloc.appendChild(errorTitle);
-
 
 
 
@@ -104,15 +97,7 @@ function checkInputs (input) {
 }
 
 function toggleErrorMsg (input){
-   // Notification for SR
-   //  let ariaErrorBloc = document.getElementById("errors-display");
-   //
-   //
-   //  let error_text = document.createElement('p');
-   //  error_text.textContent = "- "+formCheck.messages[input];
-   //  error_text.classList.add("error-"+input);
-   //  ariaErrorBloc.appendChild(error_text);
-   //  ariaErrorBloc.style.display = "block";
+
     ariaErrorBloc.style.display = "block";
 
     // Notification under each input
@@ -124,11 +109,7 @@ function toggleErrorMsg (input){
 }
 
 function hideErrorMsg (input){
-    // Remove error in error display for SR
-    // let ariaErrorBloc = document.getElementById("errors-display");
-    // let errorToRemove = document.querySelectorAll("error-"+input);
-    //
-    // ariaErrorBloc.removeChild(errorToRemove);
+
     ariaErrorBloc.style.display = "none";
 
     // Remove error under input
@@ -143,7 +124,7 @@ function formCheckIsValid(){
     for (let input in formCheck.inputs) {
         if (!formCheck.inputs[input]){
             formCheck.global = false;
-            console.log("form false!");
+
         }
     }
 }
@@ -161,6 +142,7 @@ export function submitEngine () {
 
     if (formCheck.global){
         console.log(formCheck.data);
+        document.getElementById("backgroundMask").style.display = "none";
     }
 
 }

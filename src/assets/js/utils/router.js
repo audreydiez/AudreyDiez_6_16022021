@@ -1,7 +1,7 @@
-import { IndexBuilder } from "./indexBuilder";
-import { photographerBuilder } from "./photographerBuilder";
-import {Tags} from "./tags";
-import {CustomSelect} from "./custom-select";
+import { IndexBuilder } from "../classes_builders/indexBuilder";
+import { photographerBuilder } from "../classes_builders/photographerBuilder";
+import {Tags} from "../classes/tags";
+import {CustomSelect} from "../classes/custom-select";
 
 export class Router {
 
@@ -34,7 +34,7 @@ export class Router {
     reachPhotographers (){
 
         let id = document.location.search.replace("?id=","");
-        //console.log(id);
+
 
         let photographerDetail = this.photographers.getPhotographerById(id);
         let photographerMedias = this.medias.GetMediasByPhotographer(id);

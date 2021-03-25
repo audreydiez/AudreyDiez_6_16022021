@@ -1,10 +1,10 @@
-import {VideoFactory} from "./video-factory";
-import {ImageFactory} from "./image-factory";
+import {VideoFactory} from "../classes/video-factory";
+import {ImageFactory} from "../classes/image-factory";
 
 
 export class MediaFactory {
 
-    // retourne tableau de médias
+
     constructor(data) {
 
 
@@ -56,8 +56,7 @@ export class MediaFactory {
     }
 
     static sortMedias (medias, filter) {
-        //console.log(filter)
-        //console.log(medias)
+
 
         let sortingMedias = [];
 
@@ -84,7 +83,6 @@ export class MediaFactory {
         else if (filter === "title"){
 
             sortingMedias = [...medias].sort( (a,b) => a.name.localeCompare(b.name))
-
 
 
         }

@@ -20,8 +20,7 @@ export class Photographers {
            ));
         });
 
-        //this.init(this.photographers);
-        //console.log(this.photographers);
+
     }
 
 
@@ -74,7 +73,7 @@ export class Photographers {
 
          })
 
-         //console.log(photographersSelected);
+
          return photographersSelected;
     }
 

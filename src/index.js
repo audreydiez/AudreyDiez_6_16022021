@@ -1,10 +1,15 @@
 import "./assets/scss/style.scss";
-
-
 import { submitEngine } from "./assets/js/contact_form";
 import {App} from "./app";
-import { } from "./assets/js/custom-select";
+import { } from "./assets/js/classes/custom-select";
 const JSON_url = "./src/data.json";
+
+const contactFormBtn = document.querySelectorAll(".contactForm");
+const backgroundMask = document.getElementById("backgroundMask");
+const contactFormContent = document.getElementById("contactFormModal");
+const closeModalBtn = document.querySelectorAll(".closeModal");
+const goToContent = document.getElementById("go-content");
+const lastBtnModal = document.getElementById("lastBtnModal");
 
 
 // Build index
@@ -12,23 +17,18 @@ new App(JSON_url);
 
 
 
-const contactFormBtn = document.querySelectorAll(".contactForm");
-const backgroundMask = document.getElementById("backgroundMask");
-const contactFormContent = document.getElementById("contactFormModal");
-const closeModalBtn = document.querySelectorAll(".closeModal");
+window.addEventListener("scroll",function(){
 
-const goToContent = document.getElementById("go-content");
+    if(document.getElementById("go-content") != null){
+        if(window.pageYOffset > 100){
+            goToContent.style.display = "block";
+        }
+        else if(window.pageYOffset < 100){
+            goToContent.style.display = "none";
+        }
+    }
 
-//const mainContent = document.getElementById("main-photographer-detail");
-
-const lastBtnModal = document.getElementById("lastBtnModal");
-
-
-
-
-
-
-
+},false);
 
 export function setModalForm () {
     if (contactFormBtn !== null && contactFormContent !== null){
@@ -44,54 +44,26 @@ export function setModalForm () {
         // Keep focus in modal
         lastBtnModal.addEventListener('keydown', (e) => {
             if (e.keyCode === 9 ) {
-               document.getElementById('closeModalOff').focus();
+                document.getElementById('closeModalOff').focus();
             }
         });
 
     }
 }
 
-
-
 function openContactForm() {
     backgroundMask.style.display = "flex";
-
-    document.getElementById('closeModal').focus();
 }
 
 function closeContactForm() {
     backgroundMask.style.display = "none";
-
-
 }
 
 function launchEngine(e) {
-
     e.preventDefault();
     submitEngine();
 
 }
 
-window.addEventListener("scroll",function(){
-
-    if(document.getElementById("go-content") != null){
-        if(window.pageYOffset > 100){
-            goToContent.style.display = "block";
-        }
-        else if(window.pageYOffset < 100){
-            goToContent.style.display = "none";
-        }
-    }
-
-
-},false);
-
-
-
-
-
-
-
 
 window.launchEngine = launchEngine;
-//

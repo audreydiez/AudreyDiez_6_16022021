@@ -1,12 +1,6 @@
-// Get all img via 'a'
-
-
-
 export class Lightbox {
 
-    /*
-    * @param {string} url URL de l'image
-    * */
+
     constructor() {
 
         this.links = document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".mp4"]');
@@ -34,8 +28,8 @@ export class Lightbox {
                 this.currentIndex = e.currentTarget.index;
                 this.changeImageURL(link.pathname)
                 this.openLightbox();
-                console.log(this.currentIndex);
-                console.log("longueur:" + this.links.length);
+
+
             });
             index++;
         });
@@ -71,6 +65,7 @@ export class Lightbox {
 
         });
         console.log(document.getElementById("video-tag"))
+
         // Keep focus in modal
         document.getElementById("lightboxTitle").addEventListener('keydown', (e) => {
             if (e.keyCode === 9 ) {
@@ -81,27 +76,23 @@ export class Lightbox {
 
 
     }
-    /*
-    * @param {string} url URL de l'image
-    * @return {HTMLElement)
-    * */
+
     changeImageURL (url) {
         // change lightbox img in DOM
 
         if (url.split('.').pop().toString() === "mp4"){
-            //this.img_box.style.display = "none";
-            //console.log(url);
+
 
             this.video_tag.style.display = "block";
             this.img_pushed.style.display = "none";
-            //console.log(url.split('.').pop().toString())
+
             this.video_pushed.setAttribute("src", url);
             this.video_tag.load();
             this.video_tag.play();
-            //console.log(this.video_pushed.src);
+
         }
         else if (url.split('.').pop().toString() === "jpg") {
-            //console.log(url.split('.').pop().toString())
+
 
             this.video_tag.style.display = "none";
             this.img_pushed.style.display = "block";

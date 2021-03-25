@@ -126,7 +126,7 @@ export class Tags {
                 if (tag.getAttribute("value").toString() === tagS.toString() && this.selectedTags !== this.tags) {
                     tag.classList.add("hashtag--selected")
                     tag.setAttribute("state", "selected");
-                    //console.log(tag)
+
                 }
             })
         })
@@ -147,7 +147,7 @@ export class Tags {
                   if (tagS === tagtop.getAttribute("value").toString() && this.selectedTags !== this.tags){
                       tagtop.classList.add("hashtag--selected")
                       tagtop.setAttribute("state", "selected");
-                      //console.log(tagtop.getAttribute("value").toString())
+
                   }
             })
             }
