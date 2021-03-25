@@ -9,30 +9,27 @@ export class Router {
         this.photographers = photographers;
         this.medias = medias;
         this.data = data;
+
         this.routeListenner();
-        this.reachIndex();
-        console.log("router")
+
     }
 
     routeListenner (){
-
-        console.log("route listenner")
 
 
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
                 this.reachIndex();
-                console.log("this.reachindex()")
+                console.log(document.location.pathname )
             }
-            else if (document.location.pathname === "/photographer.html"){
-                this.reachPhotographers();
-                console.log("this.reach photographers()")
+            if (document.location.pathname === "/photographer.html"){
 
+                this.reachPhotographers();
+                console.log(document.location.pathname )
             }
         }
         else {
             this.reachIndex();
-            console.log("this.reach index() else")
         }
 
     }
