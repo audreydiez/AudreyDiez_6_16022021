@@ -1,1 +1,134 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"/><title>Hello2</title><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"/></head><body><header class="header-small"><figure class="header-small__logo"><a href="/"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a></figure></header><a href="#" type="button" class="contactForm btn bottom-contact"><span>Contactez-moi</span></a><main class="main" id="main-photographer-detail"><div id="focus-filters"></div><div class="filters"><label id="select-label" class="select-label">Trier par :</label><div class="select-wrapper" id="select-wrapper"><button id="button-select" type="button" role="button" class="btn btn-select button-select" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="label button">Popularité <i class="fas fa-chevron-up"></i></button><ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1" expanded="false"><li id="popularity" role="option" class="option"><a href="#">Popularité</a> <i class="fas fa-chevron-down"></i></li><li id="date" role="option" class="option"><a href="#">Date</a></li><li id="title" role="option" class="option"><a href="#">Titre</a></li></ul></div></div><div class="pictures" id="pictures"></div><div class="day-rate"><div class="day-rate__likes" id="day-rate__likes"></div><div class="day-rate__rate">300€ / jour</div></div></main><div id="backgroundMask" aria-hidden="true"><div id="contactFormModal" role="dialog" aria-labelledby="contactForm"><button class="closeModal" id="closeModalOff" aria-hidden="true"></button> <button class="closeModal" id="closeModal" title="Close contact form"><i class="fas fa-times fa-2x"></i></button><h3 class="modalForm" id="contactForm">Contactez-moi<br>Mimi Keel</h3><form action="" name="formContact" onsubmit="launchEngine(event)" class="contactForm"><div id="errors-display" role="alertdialog" aria-labelledby="errors"></div><label for="firstName" class="form-label" id="label-firstname">Prénom</label> <input name="firstName" class="form-control" id="firstName" aria-required="true" aria-labelledby="label-firstname"><div class="form-error" id="firstName-msg">Error</div><label for="lastName" class="form-label" id="label-lastname">Nom</label> <input name="lastName" class="form-control" id="lastName" aria-required="true" aria-labelledby="label-lastname"><div class="form-error" id="lastName-msg">Error</div><label for="email" class="form-label" id="label-email">Email</label> <input name="email" class="form-control" id="email" aria-required="true" type="email" aria-labelledby="label-email"><div class="form-error" id="email-msg">Error</div><label for="message" class="form-label">Votre message</label> <textarea id="message" role="textbox" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea><div class="form-error" id="message-msg">Error</div><button type="submit" id="lastBtnModal" class="form-submit btn" title="Send">Envoyer</button></form></div></div><div id="backgroundMaskLightbox" aria-hidden="true"><div class="lightbox" id="lightbox"><button class="lightbox__close close-btn" id="closeLightbox"><span class="sr-only">Fermer</span><i class="fas fa-times fa-3x"></i></button> <button class="lightbox__next" id="next"><span class="sr-only">Suivant</span><i class="fas fa-chevron-right fa-3x"></i></button> <button class="lightbox__prev" id="previous"><span class="sr-only">Précédent</span><i class="fas fa-chevron-left fa-3x"></i></button><div class="lightbox__container" id="lightbox__container"><div class="loader"><img src="assets/images/loader.svg" alt="Chargement de l'image"></div><img class="img-pushed" id="img-pushed" src=""><video controls width="250" id="video-tag" class="video-tag"><source src="" type="video/mp4" id="video-pushed"></video><button class="title" id="lightboxTitle" aria-hidden="true"></button></div></div></div><script src="photographer.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Hello2</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+                integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+                crossorigin="anonymous"
+        />
+    </head>
+    <body>
+
+    <header class="header-small">
+        <figure class="header-small__logo">
+            <a href="/"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a>
+        </figure>
+    </header>
+
+    <a href="#" type="button" class="contactForm btn bottom-contact"><span>Contactez-moi</span></a>
+
+    <main class="main" id="main-photographer-detail">
+
+        <div id="focus-filters"></div>
+        <div class="filters">
+            <label id="select-label" class="select-label">Trier par :</label>
+
+            <div class="select-wrapper" id="select-wrapper">
+                <button id="button-select"
+                        type="button"
+                        role="button"
+                        class="btn btn-select button-select"
+                        aria-haspopup="listbox"
+                        aria-expanded="true"
+                        aria-labelledby="label button">
+                    Popularité
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+
+                <ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1" expanded="false">
+                    <li id="popularity" role="option" class="option"><a href="#">Popularité</a> <i class="fas fa-chevron-down"></i></li>
+                    <li id="date" role="option" class="option"><a href="#">Date</a></li>
+                    <li id="title" role="option" class="option"><a href="#">Titre</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pictures" id="pictures">
+        </div>
+
+        <div class="day-rate">
+            <div class="day-rate__likes" id="day-rate__likes"></div>
+            <div class="day-rate__rate">300€ / jour</div>
+        </div>
+
+    </main>
+
+    <div id="backgroundMask" aria-hidden="true">
+        <div id="contactFormModal" role="dialog" aria-labelledby="contactForm">
+            <button class="closeModal" id="closeModalOff" aria-hidden="true">
+            </button>
+            <button class="closeModal" id="closeModal" title="Close contact form">
+                <i class="fas fa-times fa-2x"></i>
+            </button>
+            <h3 class="modalForm" id="contactForm">Contactez-moi <br>Mimi Keel</h3>
+            <form action="" name="formContact" onSubmit="launchEngine(event)" class="contactForm">
+
+                <div id="errors-display" role="alertdialog" aria-labelledby="errors">
+
+                </div>
+
+                <label for="firstName" class="form-label" id="label-firstname">Prénom</label>
+                <input
+                        name="firstName"
+                        class="form-control"
+                        id="firstName"
+                        aria-required="true"
+                        type="text"
+                        aria-labelledby="label-firstname"
+                >
+                <div class="form-error" id="firstName-msg">Error</div>
+                <label for="lastName" class="form-label" id="label-lastname">Nom</label>
+                <input
+                        name="lastName"
+                        class="form-control"
+                        id="lastName"
+                        aria-required="true"
+                        type="text"
+                        aria-labelledby="label-lastname"
+                >
+                <div class="form-error" id="lastName-msg">Error</div>
+                <label for="email" class="form-label" id="label-email">Email</label>
+                <input
+                        name="email"
+                        class="form-control"
+                        id="email"
+                        aria-required="true"
+                        type="email"
+                        aria-labelledby="label-email"
+                >
+                <div class="form-error" id="email-msg">Error</div>
+                <label for="message" class="form-label">Votre message</label>
+                <textarea id="message" role="textbox" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea>
+                <div class="form-error" id="message-msg">Error</div>
+                <button type="submit" id="lastBtnModal" class="form-submit btn" title="Send">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="backgroundMaskLightbox" aria-hidden="true">
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox__close close-btn" id="closeLightbox"><span class="sr-only">Fermer</span><i class="fas fa-times fa-3x"></i></button>
+            <button class="lightbox__next" id="next"><span class="sr-only">Suivant</span><i class="fas fa-chevron-right fa-3x"></i></button>
+            <button class="lightbox__prev" id="previous"><span class="sr-only">Précédent</span><i class="fas fa-chevron-left fa-3x"></i></button>
+            <div class="lightbox__container" id="lightbox__container">
+                <div class="loader">
+                    <img src="assets/images/loader.svg" alt="Chargement de l'image">
+                </div>
+                <img class="img-pushed" id="img-pushed" src="">
+                <video controls width="250" id="video-tag" class="video-tag">
+
+                    <source src=""
+                            type="video/mp4" id="video-pushed">
+                </video>
+                <button class="title" id="lightboxTitle" aria-hidden="true"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="photographer.js"></script></body>
+</html>

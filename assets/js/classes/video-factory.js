@@ -1,1 +1,0 @@
-export class VideoFactory{constructor(t){this.id=t.id,this.photographerId=t.photographerId,this.name=t.name,this.url=t.video,this.type="video",this.tags=t.tags,this.likes=t.likes,this.date=t.date,this.price=t.price,this.description=t.description,this.poster=this.setPosterToVideo(this.url)}setPosterToVideo(t){return(t=t.split(".").slice(0,-1).join("."))+".png"}}

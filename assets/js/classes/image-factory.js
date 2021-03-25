@@ -1,1 +1,0 @@
-export class ImageFactory{constructor(t){this.id=t.id,this.photographerId=t.photographerId,this.name=t.name,this.url=t.url,this.type="image",this.url=t.image,this.tags=t.tags,this.likes=t.likes,this.date=t.date,this.price=t.price,this.description=t.description}}

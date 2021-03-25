@@ -1,1 +1,0 @@
-export class DataApi{constructor(){this.url="./data.json"}async getData(){try{let t=await fetch(this.url);if(!t.ok){const r=`An error has occured on fetching JSON: ${t.status}`;throw new Error(r)}return await t.json()}catch(t){console.log("An error has occured on fetching JSON: "+t)}}}

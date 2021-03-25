@@ -1,1 +1,0 @@
-export class Photographer{constructor(t,i,s,h,r,o,a,c){this.id=t,this.name=i,this.city=s,this.country=h,this.tags=r,this.tagline=o,this.price=a,this.portrait=c}}
