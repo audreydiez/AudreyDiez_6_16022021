@@ -14,7 +14,7 @@ export class Router {
     }
 
     routeListenner (){
-
+        console.log("route listenner")
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
                 this.reachIndex();
