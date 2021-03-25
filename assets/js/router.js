@@ -18,15 +18,17 @@ export class Router {
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
                 this.reachIndex();
+                console.log("this.reachindex()")
             }
             else if (document.location.pathname === "/photographer.html"){
                 this.reachPhotographers();
-
+                console.log("this.reach photographers()")
 
             }
         }
         else {
             this.reachIndex();
+            console.log("this.reach index() else")
         }
 
     }
