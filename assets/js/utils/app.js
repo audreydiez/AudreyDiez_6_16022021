@@ -5,11 +5,16 @@ import {MediaFactory} from "../classes_builders/media-factory";
 import {setModalForm} from "../../../index";
 
 
+
+
 export class App {
-    constructor(JSON_url) {
+    constructor() {
+
+
+
 
         // Fetch Json
-        const dataApi = new DataApi(JSON_url);
+        const dataApi = new DataApi();
 
         dataApi.getData()
             .then(data => {

@@ -1,6 +1,7 @@
 export class DataApi {
-  constructor(url) {
-    this.url = url;
+  constructor() {
+
+    this.url =  "./assets/js/utils/data.json";
   }
 
   async getData() {
