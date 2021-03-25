@@ -53,7 +53,7 @@ export class Router {
 
         const indexBuilderInstance = new IndexBuilder(this.photographers);
         new Tags(this.photographers, indexBuilderInstance);
-        Tags.test();
+
 
     }
 
