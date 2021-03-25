@@ -10,7 +10,7 @@ export class Router {
         this.medias = medias;
         this.data = data;
         this.routeListenner();
-
+        console.log("router")
     }
 
     routeListenner (){
@@ -53,6 +53,7 @@ export class Router {
 
         const indexBuilderInstance = new IndexBuilder(this.photographers);
         new Tags(this.photographers, indexBuilderInstance);
+        console.log("reach index)")
 
 
     }
