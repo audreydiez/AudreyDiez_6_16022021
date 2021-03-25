@@ -1,8 +1,7 @@
 import "./assets/scss/style.scss";
 import { submitEngine } from "./assets/js/contact_form";
-import {App} from "./app";
+import {App} from "./assets/js/utils/app";
 import { } from "./assets/js/classes/custom-select";
-const JSON_url = "./src/data.json";
 
 const contactFormBtn = document.querySelectorAll(".contactForm");
 const backgroundMask = document.getElementById("backgroundMask");
@@ -13,7 +12,7 @@ const lastBtnModal = document.getElementById("lastBtnModal");
 
 
 // Build index
-new App(JSON_url);
+new App();
 
 
 

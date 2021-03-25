@@ -96,6 +96,18 @@ module.exports = {
                     from: "src/assets/images",
                     to: "./assets/images/",
                 },
+                {
+                    from: "src/assets/js",
+                    to: "./assets/js/",
+                },
+                {
+                    from: "src/assets/fonts",
+                    to: "./assets/fonts/",
+                },
+                {
+                    from: "src/assets/fonts",
+                    to: "./assets/fonts/",
+                },
             ]
         })
     ]
