@@ -34,6 +34,7 @@ export class App {
     init () {
         new Router(this.photographers, this.medias);
         setModalForm();
+        console.log(this.photographers);
 
     }
 
