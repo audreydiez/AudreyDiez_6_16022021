@@ -27,7 +27,7 @@ export class IndexBuilder {
 
       // Tags creation
       photographer.tags.forEach((tag) => {
-        tags += `<li class="hashtag hashtag-photographer" state="unselected" value="${tag}">#<span class="sr-only" title="${tag}">Tag</span>${tag}</li>`;
+        tags += `<li class="hashtag hashtag-photographer" state="unselected" value="${tag}"><a href="#" title="${tag}">#${tag}</a>${tag}</li>`;
       });
 
       // Fill the article
