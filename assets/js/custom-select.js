@@ -30,7 +30,7 @@ export class CustomSelect {
       option.addEventListener("click", (e) => {
         e.preventDefault();
 
-        if (this.filterList.getAttribute("expanded") === "true") {
+        if (this.filterList.getAttribute("title") === "true") {
           this.closeList();
           this.selected = option.getAttribute("id");
 
@@ -70,15 +70,15 @@ export class CustomSelect {
   }
 
   expandList() {
-    if (this.filterList.getAttribute("expanded") === "false") {
+    if (this.filterList.getAttribute("title") === "false") {
       this.filterList.style.display = "flex";
-      this.filterList.setAttribute("expanded", "true");
+      this.filterList.setAttribute("title", "true");
       this.backgroundSelect.style.display = "flex";
     }
   }
 
   closeList() {
-    this.filterList.setAttribute("expanded", "false");
+    this.filterList.setAttribute("title", "false");
     this.filterList.style.display = "none";
     this.backgroundSelect.style.display = "none";
   }
