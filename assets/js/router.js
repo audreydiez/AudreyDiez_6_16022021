@@ -14,6 +14,8 @@ export class Router {
         console.log("const router")
 
         if ("onhashchange" in window) {
+            console.log("hash change")
+            console.log(window)
             if (document.location.pathname === "https://audreydiez.github.io/AudreyDiez_6_16022021/"){
                 console.log("path /")
                 this.reachIndex();
