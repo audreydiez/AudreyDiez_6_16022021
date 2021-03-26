@@ -15,11 +15,12 @@
 
     <header class="header-small">
         <figure class="header-small__logo">
-            <a href="/AudreyDiez_6_16022021/"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a>
+<!--            <a href="/"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a>-->
+<a href="/AudreyDiez_6_16022021/"><img src="assets/images/Logo.svg" alt="Fisheye - Page d'accueil" class="logo"></a>
         </figure>
     </header>
 
-    <a href="#" type="button" class="contactForm btn bottom-contact"><span>Contactez-moi</span></a>
+    <a href="#"  class="contactForm btn bottom-contact"><span>Contactez-moi</span></a>
 
     <main class="main" id="main-photographer-detail">
 
@@ -29,7 +30,6 @@
 
             <div class="select-wrapper" id="select-wrapper">
                 <button id="button-select"
-                        type="button"
                         role="button"
                         class="btn btn-select button-select"
                         aria-haspopup="listbox"
@@ -39,7 +39,7 @@
                     <i class="fas fa-chevron-up"></i>
                 </button>
 
-                <ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1" expanded="false">
+                <ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1">
                     <li id="popularity" role="option" class="option"><a href="#">Popularité</a> <i class="fas fa-chevron-down"></i></li>
                     <li id="date" role="option" class="option"><a href="#">Date</a></li>
                     <li id="title" role="option" class="option"><a href="#">Titre</a></li>
@@ -65,7 +65,7 @@
                 <i class="fas fa-times fa-2x"></i>
             </button>
             <h3 class="modalForm" id="contactForm">Contactez-moi <br>Mimi Keel</h3>
-            <form action="" name="formContact" onSubmit="launchEngine(event)" class="contactForm">
+            <form name="formContact" onSubmit="launchEngine(event)" class="contactForm">
 
                 <div id="errors-display" role="alertdialog" aria-labelledby="errors">
 
@@ -80,7 +80,7 @@
                         type="text"
                         aria-labelledby="label-firstname"
                 >
-                <div class="form-error" id="firstName-msg">Error</div>
+                <div class="form-error" id="firstName-msg errors">Error</div>
                 <label for="lastName" class="form-label" id="label-lastname">Nom</label>
                 <input
                         name="lastName"
@@ -90,7 +90,7 @@
                         type="text"
                         aria-labelledby="label-lastname"
                 >
-                <div class="form-error" id="lastName-msg">Error</div>
+                <div class="form-error" id="lastName-msg errors">Error</div>
                 <label for="email" class="form-label" id="label-email">Email</label>
                 <input
                         name="email"
@@ -100,10 +100,10 @@
                         type="email"
                         aria-labelledby="label-email"
                 >
-                <div class="form-error" id="email-msg">Error</div>
+                <div class="form-error" id="email-msg errors">Error</div>
                 <label for="message" class="form-label">Votre message</label>
-                <textarea id="message" role="textbox" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea>
-                <div class="form-error" id="message-msg">Error</div>
+                <textarea id="message" aria-multiline="true" aria-required="true" class="form-control form-textarea"></textarea>
+                <div class="form-error" id="message-msg errors">Error</div>
                 <button type="submit" id="lastBtnModal" class="form-submit btn" title="Send">Envoyer</button>
             </form>
         </div>
@@ -118,10 +118,10 @@
                 <div class="loader">
                     <img src="assets/images/loader.svg" alt="Chargement de l'image">
                 </div>
-                <img class="img-pushed" id="img-pushed" src="">
+                <img class="img-pushed" id="img-pushed" src="assets/images/Logo.svg" alt="">
                 <video controls width="250" id="video-tag" class="video-tag">
 
-                    <source src=""
+                    <source src="/assets/images/pictures/Sport_Tricks_in_the_air.mp4"
                             type="video/mp4" id="video-pushed">
                 </video>
                 <button class="title" id="lightboxTitle" aria-hidden="true"></button>

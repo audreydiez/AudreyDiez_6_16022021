@@ -15,12 +15,14 @@ export class Router {
 
         if ("onhashchange" in window) {
             console.log("hash change")
-            console.log(window)
+            //if (document.location.pathname === "/"){
             if (document.location.pathname === "/AudreyDiez_6_16022021/"){
-                console.log("path /")
-                this.reachIndex();
-                //console.log(document.location.pathname )
-            }
+                    console.log("path /")
+                    this.reachIndex();
+                    //console.log(document.location.pathname )
+                }
+
+            //if (document.location.pathname === "/photographer.html"){
             if (document.location.pathname === "/AudreyDiez_6_16022021/photographer.html"){
                 console.log("path /photographer")
                 this.reachPhotographers();

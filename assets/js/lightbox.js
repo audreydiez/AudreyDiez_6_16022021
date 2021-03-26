@@ -21,12 +21,14 @@ export class Lightbox {
 
         let index = 0;
         this.links.forEach(link => {
-            //console.log(link.pathname)
+
+
             link.index = index;
             link.addEventListener('click', e => {
                 e.preventDefault();
+
                 this.currentIndex = e.currentTarget.index;
-                this.changeImageURL(link.pathname)
+                this.changeImageURL(link.pathname, link.getAttribute("aria-describedby"))
                 this.openLightbox();
 
 
@@ -77,7 +79,7 @@ export class Lightbox {
 
     }
 
-    changeImageURL (url) {
+    changeImageURL (url, alt) {
         // change lightbox img in DOM
 
         if (url.split('.').pop().toString() === "mp4"){
@@ -87,6 +89,7 @@ export class Lightbox {
             this.img_pushed.style.display = "none";
 
             this.video_pushed.setAttribute("src", url);
+            this.video_pushed.setAttribute("alt", alt);
             this.video_tag.load();
             this.video_tag.play();
 
@@ -96,6 +99,7 @@ export class Lightbox {
 
             this.video_tag.style.display = "none";
             this.img_pushed.style.display = "block";
+            this.img_pushed.alt = alt;
 
             this.img_pushed.src = url;
 
