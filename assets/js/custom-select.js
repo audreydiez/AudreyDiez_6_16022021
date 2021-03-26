@@ -46,7 +46,7 @@ export class CustomSelect {
           if (this.selected === "date") {
             this.filterBtn.innerHTML = `   
                                                 Date                                              
-                                                <i class="fas fa-chevron-up"></i>
+                                                <em class="fas fa-chevron-up"></em>
                                                 `;
           }
           if (this.selected === "popularity") {
