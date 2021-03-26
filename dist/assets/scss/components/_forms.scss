@@ -1,0 +1,43 @@
+
+
+
+.contactForm{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 1rem 0 ;
+
+    .form-label, .form-control{
+        flex-basis: 100%;
+    }
+
+    .form-label{
+        font-size: 1.2rem;
+        color: #312E2E;
+    }
+    .form-control{
+        margin: 0.3rem 0;
+        min-height: 35px;
+        border:none;
+        border-radius: 5px;
+    }
+    .form-textarea{
+        min-height: 100px;
+    }
+    .form-submit{
+        margin-top: 1rem;
+    }
+
+    .form-error{
+        display: none;
+        padding: 0 0 1rem 0;
+        color: $colour-primary;
+    }
+    #errors-display{
+        display: none;
+        padding: 1rem 0;
+        color: $colour-primary;
+    }
+
+}

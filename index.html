@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>FishEyes</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+                integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+                crossorigin="anonymous"
+        />
+        <link rel="icon" href="favicon.ico" type="assets/images/favicon.png">
+
+    </head>
+    <body>
+
+        <div id="app"></div>
+
+        <header class="header">
+            <figure class="header__logo">
+                <a href="/" title="Homepage"><img src="assets/images/Logo.svg" alt="Fisheye - Homepage" class="logo"></a>
+            </figure>
+            <div class="header__filters"  aria-label="photographer categories">
+                <ul class="filters-list" id="filters-list">
+
+                </ul>
+            </div>
+            <nav class="header__nav nav-link">
+                <h1 class="nav-link">Nos photographes</h1>
+            </nav>
+            <a href="#main-index" type="button" id="go-content" title="Passer au contenu" class="content-tag">Passer au contenu</a>
+        </header>
+
+
+        <main class="ph-cards" id="main-index" aria-label="photographers">
+        </main>
+
+    <script src="./dist/index.js"></script></body>
+</html>

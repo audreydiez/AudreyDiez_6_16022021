@@ -4,6 +4,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
+const resolve = require('path').resolve;
 
 
 
@@ -107,6 +108,10 @@ module.exports = {
                 {
                     from: "src/assets/fonts",
                     to: "./assets/fonts/",
+                },
+                {
+                    from: "src/",
+                    to: "./",
                 },
             ]
         })

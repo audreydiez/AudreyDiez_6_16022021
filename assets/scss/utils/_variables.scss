@@ -1,0 +1,68 @@
+// Colours
+$colour-primary: #901C1C;
+$colour-secondary: #DB8876;
+$colour-tertiary: #FAFAFA;
+
+$primary-active : #DB8876;
+$tag-active : #901C1C;
+
+$background-base : #FFF;
+$default-pic: #C4C4C4;
+$tag-border-color : #C4C4C4;
+
+// Basic layout
+$layout-mgn-vert : 2rem;
+$layout-mgn-hrt : 1rem;
+
+// Font colours
+$font-colour-light : #FFF;
+$font-colour-medium: #D3573C;
+$font-colour-dark : #901C1C;
+$font-colour-grey : #525252;
+$font-colour-light-grey : #757575;
+$font-colour-black : #000;
+
+// Fonts basics variables
+$font-size-base: 1rem;
+$font-base: 'DM Sans';
+$font-default : sans-serif;
+
+// Font Weights
+$f-w-base : 400;
+$f-w-semibold : 500;
+$f-w-bold : 700;
+
+// Texts
+$line-height : 1.6rem;
+
+// H1 Styles
+$font_size-h1 : 2.2rem;
+$font_size-h1-profil : 4rem;
+
+// H2 Styles
+$font-size-h2 : 2.2rem;
+
+// H3 Styles
+$font-size-h3 : 1.5rem;
+$font-size-h3-modal : 2rem;
+// Hastags
+$font-size-tag : 0.9rem;
+
+// Filters
+$font-size-filters : 1rem;
+
+// Box shadows
+$b-shadow : 3px 3px 8px #D3D3D3;
+$b-shadow-hover : 3px 3px 8px #666;
+
+
+
+// Breakpoint for responsive
+$breakpoints:(
+        xs: "320",
+        sm: "576px",
+        md: "992px",
+        lg: "1024px",
+        xl: "1200px",
+        xxl: "1400px"
+);
