@@ -13,15 +13,6 @@ export class Router {
 
         console.log("const router")
 
-        this.router();
-
-    }
-
-    router (){
-
-        console.log("router")
-
-
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
                 console.log("path /")
@@ -39,6 +30,17 @@ export class Router {
             console.log("path / default")
             this.reachIndex();
         }
+
+
+        this.router();
+
+    }
+
+    router (){
+
+        console.log("router")
+
+
 
 
 
