@@ -29,6 +29,7 @@ export class CustomSelect {
     this.options.forEach((option) => {
       option.addEventListener("click", (e) => {
         e.preventDefault();
+
         if (this.filterList.getAttribute("expanded") === "true") {
           this.closeList();
           this.selected = option.getAttribute("id");

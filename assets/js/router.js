@@ -36,19 +36,8 @@ export class Router {
         }
 
 
-        this.router();
-
     }
 
-    router (){
-
-        console.log("router")
-
-
-
-
-
-    }
 
     reachPhotographers (){
         console.log("reachPhotographers")
