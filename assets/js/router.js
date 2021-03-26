@@ -10,33 +10,42 @@ export class Router {
         this.medias = medias;
         this.data = data;
 
+
+        console.log("const router")
+
         this.router();
 
     }
 
     router (){
 
+        console.log("router")
+
 
         if ("onhashchange" in window) {
             if (document.location.pathname === "/"){
+                console.log("path /")
                 this.reachIndex();
-                console.log(document.location.pathname )
+                //console.log(document.location.pathname )
             }
             if (document.location.pathname === "/photographer.html"){
-
+                console.log("path /photographer")
                 this.reachPhotographers();
-                console.log(document.location.pathname )
+                //console.log(document.location.pathname )
             }
         }
 
         else {
+            console.log("path / default")
             this.reachIndex();
         }
+
+
 
     }
 
     reachPhotographers (){
-
+        console.log("reachPhotographers")
         let id = document.location.search.replace("?id=","");
 
 
@@ -54,10 +63,10 @@ export class Router {
     }
 
     reachIndex (){
-
+        console.log("reachIndex")
         const indexBuilderInstance = new IndexBuilder(this.photographers);
         new Tags(this.photographers, indexBuilderInstance);
-        console.log("reach index)")
+        console.log("reach index done)")
 
 
     }
