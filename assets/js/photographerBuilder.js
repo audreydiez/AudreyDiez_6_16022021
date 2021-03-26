@@ -95,7 +95,7 @@ export class photographerBuilder{
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2>
                        <p class="price">${media.price}€</p>
-                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes} </span><i class="fas fa-heart"></i></a>
+                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
                   </figcaption>
               </figure>  
             `;
@@ -147,7 +147,7 @@ export class photographerBuilder{
 
     setTotalLikescounter(likesTotal){
         let tag = document.getElementById("day-rate__likes");
-        tag.innerHTML = likesTotal + ` <i class="fas fa-heart"></i>`
+        tag.innerHTML = likesTotal + ` <em class="fas fa-heart"></em>`
     }
 
 }

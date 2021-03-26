@@ -52,13 +52,13 @@ export class CustomSelect {
           if (this.selected === "popularity") {
             this.filterBtn.innerHTML = `  
                                                    Popularité                                               
-                                                <i class="fas fa-chevron-up"></i>
+                                                <em class="fas fa-chevron-up"></em>
                                                 `;
           }
           if (this.selected === "title") {
             this.filterBtn.innerHTML = ` 
                                                 Titre                                                
-                                                <i class="fas fa-chevron-up"></i>
+                                                <em class="fas fa-chevron-up"></em>
                                                 `;
           }
         }
