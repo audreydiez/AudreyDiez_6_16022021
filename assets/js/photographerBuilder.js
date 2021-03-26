@@ -85,7 +85,6 @@ export class photographerBuilder{
 
             let childElement = document.createElement("article");
             childElement.classList.add("pictures__picture");
-            childElement.setAttribute("aria-label", "Images et vidéos du photographe");
 
             childElement.innerHTML = `
               <figure class="photo">
@@ -93,11 +92,11 @@ export class photographerBuilder{
                        ${thumbnail}
                   </a>
                   <figcaption class="photo__details">
-                       <h2 class="photo-title">${media.name}</h2>
+                       <h2 class="photo-title">${media.name}</h2> 
                        <p class="price">${media.price}€</p>
-                       <a href="#" class="likes" title="Mentions j'aime" likesBlock"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
+                       <a href="#" class="likes likesBlock" aria-describedby="Mentions j'aime"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
                   </figcaption>
-              </figure>  
+              </figure>   
             `;
 
             parentElement.appendChild(childElement);
@@ -147,7 +146,7 @@ export class photographerBuilder{
 
     setTotalLikescounter(likesTotal){
         let tag = document.getElementById("day-rate__likes");
-        tag.innerHTML = likesTotal + ` <em class="fas fa-heart"></em>`
+        tag.innerHTML = likesTotal + ` <i class="fas fa-heart"></i>`
     }
 
 }

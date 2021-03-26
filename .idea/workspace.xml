@@ -3,41 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="14e1dc61-cf63-4d15-9b93-1f10b89e21d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/custom-select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/image-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/lightbox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/photographer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/photographers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/tags.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes/video-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes_builders/indexBuilder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes_builders/media-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/classes_builders/photographerBuilder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/utils/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/js/utils/router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/data-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/photographer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/custom-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/custom-select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/image-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/image-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/lightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/photographer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/photographer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/photographers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/photographers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/tags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes/video-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/video-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes_builders/indexBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes_builders/media-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/media-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/classes_builders/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/utils/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/utils/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/photographerBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/lightbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/data-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/photographer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616680355614</updated>
       <workItem from="1616680360201" duration="17579000" />
-      <workItem from="1616764876349" duration="7508000" />
+      <workItem from="1616764876349" duration="10297000" />
     </task>
     <servers />
   </component>

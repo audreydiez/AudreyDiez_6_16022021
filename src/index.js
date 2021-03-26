@@ -52,6 +52,7 @@ export function setModalForm () {
 
 function openContactForm() {
     backgroundMask.style.display = "flex";
+    document.getElementById('closeModalOff').focus();
 }
 
 function closeContactForm() {

@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8"/>
-        <title>Hello2</title>
+        <title>Fisheye</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link
                 rel="stylesheet"
@@ -34,20 +34,21 @@
                         class="btn btn-select button-select"
                         aria-haspopup="listbox"
                         aria-expanded="true"
-                        aria-labelledby="select-label">
+                        aria-labelledby="select-label button-select option-sort">
                     Popularité
                     <em class="fas fa-chevron-up"></em>
                 </button>
 
                 <ul class="list" id="list" role="listbox" aria-activedescendant="popularity" tabindex="-1" title="false">
-                    <li id="popularity" role="option" class="option"><a href="#">Popularité</a> <em class="fas fa-chevron-down"></em></li>
-                    <li id="date" role="option" class="option"><a href="#">Date</a></li>
-                    <li id="title" role="option" class="option"><a href="#">Titre</a></li>
+                    <li id="popularity" role="option" class="option"><a href="#" class="option-sort">Popularité</a> <em class="fas fa-chevron-down"></em></li>
+                    <li id="date" role="option" class="option"><a href="#" class="option-sort">Date</a></li>
+                    <li id="title" role="option" class="option"><a href="#" class="option-sort">Titre</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="pictures" id="pictures">
+
         </div>
 
         <div class="day-rate">
@@ -67,9 +68,9 @@
             <h3 class="modalForm" id="contactForm">Contactez-moi <br>Mimi Keel</h3>
             <form name="formContact" onSubmit="launchEngine(event)" class="contactForm">
 
-                <div id="errors-display" role="alertdialog" aria-labelledby="firstName-msg lastName-msg email-msg message-msg">
+                <p id="errors-display" role="alertdialog" aria-labelledby="firstName-msg lastName-msg email-msg message-msg">
 
-                </div>
+                </p>
 
                 <label for="firstName" class="form-label" id="label-firstname">Prénom</label>
                 <input
@@ -79,6 +80,7 @@
                         aria-required="true"
                         type="text"
                         aria-labelledby="label-firstname"
+                        required
                 >
                 <div class="form-error errors" id="firstName-msg">Error</div>
                 <label for="lastName" class="form-label" id="label-lastname">Nom</label>
@@ -89,6 +91,7 @@
                         aria-required="true"
                         type="text"
                         aria-labelledby="label-lastname"
+                        required
                 >
                 <div class="form-error errors" id="lastName-msg">Error</div>
                 <label for="email" class="form-label" id="label-email">Email</label>
@@ -99,6 +102,7 @@
                         aria-required="true"
                         type="email"
                         aria-labelledby="label-email"
+                        required
                 >
                 <div class="form-error errors" id="email-msg">Error</div>
                 <label for="message" class="form-label">Votre message</label>
@@ -111,20 +115,21 @@
 
     <div id="backgroundMaskLightbox" aria-hidden="true">
         <div class="lightbox" id="lightbox">
-            <button class="lightbox__close close-btn" id="closeLightbox"><span class="sr-only">Fermer</span><em class="fas fa-times fa-3x"></em></button>
-            <button class="lightbox__next" id="next"><span class="sr-only">Suivant</span><em class="fas fa-chevron-right fa-3x"></em></button>
-            <button class="lightbox__prev" id="previous"><span class="sr-only">Précédent</span><em class="fas fa-chevron-left fa-3x"></em></button>
-            <div class="lightbox__container" id="lightbox__container">
+
+            <button class="lightbox__close close-btn" id="closeLightbox"><span class="sr-only">Close picture</span><em class="fas fa-times fa-3x"></em></button>
+            <button class="lightbox__next" id="next"><span class="sr-only">Next picture</span><em class="fas fa-chevron-right fa-3x"></em></button>
+            <button class="lightbox__prev" id="previous"><span class="sr-only">Previous picture<picture></picture></span><em class="fas fa-chevron-left fa-3x"></em></button>
+            <div class="lightbox__container" id="lightbox__container" aria-label="Photo">
                 <div class="loader">
                     <img src="assets/images/loader.svg" alt="Chargement de l'image">
                 </div>
                 <img class="img-pushed" id="img-pushed" src="assets/images/Logo.svg" alt="">
-                <video controls width="250" id="video-tag" class="video-tag">
+                <video controls width="250" id="video-tag" class="video-tag" aria-label="Vidéo">
 
                     <source src="#"
                             type="video/mp4" id="video-pushed">
                 </video>
-
+                <button class="btn-hidden" id="lightboxTitle" aria-hidden="true" aria-label="Close"></button>
             </div>
         </div>
     </div>
