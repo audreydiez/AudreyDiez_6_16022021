@@ -7,6 +7,7 @@ export class Lightbox {
         this.img_pushed = document.getElementById("img-pushed");
         this.video_pushed = document.getElementById("video-pushed");
         this.video_tag = document.getElementById("video-tag");
+        this.altText = document.getElementById("alt-text");
 
         this.backgroundMaskLightbox = document.getElementById("backgroundMaskLightbox");
         this.closeLightboxBtn = document.querySelector(".close-btn");
@@ -28,7 +29,7 @@ export class Lightbox {
                 e.preventDefault();
 
                 this.currentIndex = e.currentTarget.index;
-                this.changeImageURL(link.pathname, link.getAttribute("aria-describedby"))
+                this.changeImageURL(link.pathname, link.getAttribute("aria-label"))
                 this.openLightbox();
 
 
@@ -90,6 +91,7 @@ export class Lightbox {
 
             this.video_pushed.setAttribute("src", url);
             this.video_pushed.setAttribute("alt", alt);
+            this.altText.innerText = alt;
             this.video_tag.load();
             this.video_tag.play();
 
@@ -100,6 +102,7 @@ export class Lightbox {
             this.video_tag.style.display = "none";
             this.img_pushed.style.display = "block";
             this.img_pushed.alt = alt;
+            this.altText.innerText = alt;
 
             this.img_pushed.src = url;
 
@@ -126,14 +129,17 @@ export class Lightbox {
         this.changeImageIndex("next");
         // Get image URL via current index
         let urlByIndex = this.links[this.currentIndex].pathname;
-        this.changeImageURL(urlByIndex);
+        let altText = this.links[this.currentIndex].getAttribute("aria-label");
+
+        this.changeImageURL(urlByIndex, altText);
     }
 
     previousIMG (){
         this.changeImageIndex("previous");
         // Get image URL via current index
         let urlByIndex = this.links[this.currentIndex].pathname;
-        this.changeImageURL(urlByIndex);
+        let altText = this.links[this.currentIndex].getAttribute("aria-label");
+        this.changeImageURL(urlByIndex, altText);
     }
 
     changeImageIndex(direction) {
