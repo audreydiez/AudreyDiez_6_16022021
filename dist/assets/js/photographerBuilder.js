@@ -85,7 +85,6 @@ export class photographerBuilder{
 
             let childElement = document.createElement("article");
             childElement.classList.add("pictures__picture");
-            childElement.setAttribute("aria-label", "Images et vidéos du photographe");
 
             childElement.innerHTML = `
               <figure class="photo">
@@ -95,7 +94,7 @@ export class photographerBuilder{
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2>
                        <p class="price">${media.price}€</p>
-                       <a href="#" class="likes likesBlock"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
+                       <a href="#" class="likes likesBlock" aria-label="likes for this picture"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
                   </figcaption>
               </figure>  
             `;

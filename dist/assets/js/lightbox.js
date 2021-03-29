@@ -67,7 +67,7 @@ export class Lightbox {
 
         });
 
-
+        document.getElementById('closeLightbox').focus();
         // Keep focus in modal
         document.getElementById("lightboxTitle").addEventListener('keydown', (e) => {
             if (e.keyCode === 9 ) {

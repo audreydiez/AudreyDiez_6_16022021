@@ -43,7 +43,7 @@ export class IndexBuilder {
                 <p class="location">${photographer.city}, ${photographer.country}</p>
                 <p class="quote">${photographer.tagline}</p>
                 <p class="rate">${photographer.price}€/jour</p>
-                <ul class="tags" id="tags">
+                <ul class="tags" id="tags" aria-label="Photographer tags">
                     ${tags}                    
                 </ul>`;
 

@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="14e1dc61-cf63-4d15-9b93-1f10b89e21d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/photographerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/indexBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/indexBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/js/indexBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/js/lightbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/js/photographerBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/js/tags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/scss/components/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/photographer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/photographer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/js/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/lightbox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/photographerBuilder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/tags.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/components/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/components/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/components/_lightbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/components/_lightbox.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/photographer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/photographer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1616680355614</updated>
       <workItem from="1616680360201" duration="17579000" />
-      <workItem from="1616764876349" duration="10297000" />
+      <workItem from="1616764876349" duration="10603000" />
+      <workItem from="1617003373456" duration="6696000" />
     </task>
     <servers />
   </component>

@@ -27,7 +27,7 @@ export class Tags {
 
 
         const parentElement = document.getElementById("filters-list");
-
+        parentElement.setAttribute("aria-label", "Search by tags")
         // Set tags in header
         this.tags.forEach(tag => {
             const childElement = document.createElement("li");

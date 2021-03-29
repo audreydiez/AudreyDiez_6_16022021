@@ -88,7 +88,7 @@ export class photographerBuilder{
 
             childElement.innerHTML = `
               <figure class="photo">
-                  <a href="assets/images/pictures/${media.url}" type="${media.type}" aria-describedby="${media.description}">
+                  <a href="assets/images/pictures/${media.url}" type="${media.type}" aria-label="${media.description}">
                        ${thumbnail}
                   </a>
                   <figcaption class="photo__details">
